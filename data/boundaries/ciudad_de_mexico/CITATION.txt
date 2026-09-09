@@ -1,0 +1,6 @@
+Ciudad de México (Distrito Federal) ADM1 boundary.
+
+Source: geoBoundaries gbOpen MEX ADM1 (INEGI / Instituto Nacional de Estadística y Geografía).
+License: CC BY 3.0 IGO
+https://www.geoboundaries.org/api/current/gbOpen/MEX/ADM1/
+Extracted feature: shapeName = "Distrito Federal" (Ciudad de México).

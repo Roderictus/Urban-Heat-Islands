@@ -1,0 +1,4 @@
+Central de Abasto de la Ciudad de Mexico (CEDA), Iztapalapa.
+Geometry: OpenStreetMap way 1199350930, retrieved via Nominatim polygon_geojson.
+https://www.openstreetmap.org/way/1199350930
+License: ODbL 1.0. https://www.openstreetmap.org/copyright

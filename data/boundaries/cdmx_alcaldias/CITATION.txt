@@ -1,0 +1,3 @@
+CDMX alcaldias (16 demarcaciones territoriales).
+Extracted from geoBoundaries gbOpen MEX ADM2 (World Bank municipalities, CC BY 4.0).
+https://www.geoboundaries.org/api/current/gbOpen/MEX/ADM2/

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CDMX · tres métodos · abril–mayo</title>
+  <style>
+    body { margin:0; background:#050505; color:#f2f2f2; font-family:"Segoe UI",Arial,sans-serif; }
+    .wrap { max-width:960px; margin:0 auto; padding:24px 16px 48px; }
+    h1 { font-size:1.35rem; margin:0 0 8px; }
+    .kicker { color:#f08c2b; letter-spacing:.12em; text-transform:uppercase; font-size:.72rem; }
+    .year { font-size:clamp(2.6rem,7vw,4rem); font-weight:800; margin:8px 0 4px; }
+    .meta { color:#9a9a9a; margin:0 0 12px; }
+    .tabs button {
+      background:#1a1a1a; color:#ddd; border:1px solid #333; padding:8px 12px;
+      margin:0 6px 10px 0; cursor:pointer; font-weight:600;
+    }
+    .tabs button.on { background:#f08c2b; color:#111; }
+    .stage { position:relative; }
+    .stage img { width:100%; display:block; }
+    .watermark {
+      position:absolute; right:12px; bottom:10px; font-size:1.5rem; font-weight:800;
+      color:#d8d8d8; text-shadow:0 1px 8px #000; opacity:.92; pointer-events:none;
+    }
+    input[type=range] { width:100%; accent-color:#f08c2b; margin-top:12px; }
+    .ticks { display:flex; justify-content:space-between; color:#888; font-size:.7rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">Anaplian.com · teledetección urbana</div>
+    <h1>Islas de calor CDMX · tres métodos</h1>
+    <div class="year" id="yearLabel">2013</div>
+    <p class="meta" id="methodMeta">Media por píxel, nubes de escena < 80 % · amarillo–rojo</p>
+    <div class="tabs" id="tabs"></div>
+    <div class="stage">
+      <img id="frame" src="m1_composite/cdmx_2013.png?v=1788959752" alt="">
+      <div class="watermark">Anaplian.com</div>
+    </div>
+    <input id="slider" type="range" min="0" max="13" value="0" step="1">
+    <div class="ticks"><span>2013</span><span>2014</span><span>2015</span><span>2016</span><span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+  </div>
+  <script>
+    const years = [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+    const files = {"m1_composite": ["m1_composite/cdmx_2013.png?v=1788959752", "m1_composite/cdmx_2014.png?v=1788959774", "m1_composite/cdmx_2015.png?v=1788959801", "m1_composite/cdmx_2016.png?v=1788959830", "m1_composite/cdmx_2017.png?v=1788959857", "m1_composite/cdmx_2018.png?v=1788959892", "m1_composite/cdmx_2019.png?v=1788959931", "m1_composite/cdmx_2020.png?v=1788959970", "m1_composite/cdmx_2021.png?v=1788960023", "m1_composite/cdmx_2022.png?v=1788960065", "m1_composite/cdmx_2023.png?v=1788960113", "m1_composite/cdmx_2024.png?v=1788960161", "m1_composite/cdmx_2025.png?v=1788960199", "m1_composite/cdmx_2026.png?v=1788960267"], "m2_suhi": ["m2_suhi/cdmx_2013.png?v=1788962120", "m2_suhi/cdmx_2014.png?v=1788962140", "m2_suhi/cdmx_2015.png?v=1788962157", "m2_suhi/cdmx_2016.png?v=1788962175", "m2_suhi/cdmx_2017.png?v=1788962197", "m2_suhi/cdmx_2018.png?v=1788962218", "m2_suhi/cdmx_2019.png?v=1788962239", "m2_suhi/cdmx_2020.png?v=1788962261", "m2_suhi/cdmx_2021.png?v=1788962281", "m2_suhi/cdmx_2022.png?v=1788962300", "m2_suhi/cdmx_2023.png?v=1788962323", "m2_suhi/cdmx_2024.png?v=1788962352", "m2_suhi/cdmx_2025.png?v=1788962382", "m2_suhi/cdmx_2026.png?v=1788962406"], "m3_both": ["m3_both/cdmx_2013.png?v=1788962129", "m3_both/cdmx_2014.png?v=1788962148", "m3_both/cdmx_2015.png?v=1788962164", "m3_both/cdmx_2016.png?v=1788962187", "m3_both/cdmx_2017.png?v=1788962210", "m3_both/cdmx_2018.png?v=1788962227", "m3_both/cdmx_2019.png?v=1788962248", "m3_both/cdmx_2020.png?v=1788962272", "m3_both/cdmx_2021.png?v=1788962290", "m3_both/cdmx_2022.png?v=1788962313", "m3_both/cdmx_2023.png?v=1788962341", "m3_both/cdmx_2024.png?v=1788962368", "m3_both/cdmx_2025.png?v=1788962391", "m3_both/cdmx_2026.png?v=1788962424"]};
+    const methods = [["m1_composite", "1. Composite LST > 35 \u00b0C", "Media por p\u00edxel, nubes de escena < 80 % \u00b7 amarillo\u2013rojo"], ["m2_suhi", "2. Diferencial rural (SUHI \u2265 10 \u00b0C)", "Misma media, recorte SUHI \u2265 10 \u00b0C \u00b7 cian\u2013\u00e1mbar"], ["m3_both", "3. Composite amplio + SUHI \u2265 10 \u00b0C", "Todas las escenas abril\u2013mayo + SUHI \u00b7 cian\u2013\u00e1mbar"]];
+    let method = methods[0][0];
+    const tabs = document.getElementById("tabs");
+    methods.forEach(([key, label, meta], i) => {
+      const b = document.createElement("button");
+      b.textContent = label;
+      if (i === 0) b.className = "on";
+      b.onclick = () => {
+        method = key;
+        document.getElementById("methodMeta").textContent = meta;
+        [...tabs.children].forEach(x => x.classList.remove("on"));
+        b.classList.add("on");
+        show(document.getElementById("slider").value);
+      };
+      tabs.appendChild(b);
+    });
+    function show(i) {
+      i = Number(i);
+      document.getElementById("yearLabel").textContent = years[i];
+      document.getElementById("frame").src = files[method][i];
+    }
+    document.getElementById("slider").oninput = e => show(e.target.value);
+  </script>
+</body>
+</html>

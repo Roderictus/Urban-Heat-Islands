@@ -1,0 +1,4 @@
+Aeropuerto Internacional de la Ciudad de México (AICM / MEX).
+Geometry: OpenStreetMap way 1429419990 (iata=MEX), retrieved via Overpass.
+https://www.openstreetmap.org/way/1429419990
+License: ODbL 1.0. https://www.openstreetmap.org/copyright

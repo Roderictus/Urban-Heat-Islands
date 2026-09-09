@@ -1,0 +1,17 @@
+alcaldia,slug,lst_peak_C,lst_mean_C,lst_min_C,suhi_C,internal_range_C,tair_mean_C,tair_max_C,n_pixels,surface_img,atm_img
+Venustiano Carranza,venustiano_carranza,56.76,43.94,34.69,16.37,22.07,18.52,25.28,40631,figures/venustiano_carranza_surface_roads.png,figures/venustiano_carranza_atmospheric.png
+Iztacalco,iztacalco,56.04,42.77,35.06,15.2,20.99,18.4,25.21,27844,figures/iztacalco_surface_roads.png,figures/iztacalco_atmospheric.png
+Azcapotzalco,azcapotzalco,60.85,42.49,28.65,14.92,32.2,17.58,24.77,40198,figures/azcapotzalco_surface_roads.png,figures/azcapotzalco_atmospheric.png
+Iztapalapa,iztapalapa,57.42,42.35,29.95,14.78,27.47,18.67,25.53,135098,figures/iztapalapa_surface_roads.png,figures/iztapalapa_atmospheric.png
+Cuauhtémoc,cuauhtemoc,52.5,41.42,30.4,13.84,22.09,17.38,24.59,38991,figures/cuauhtemoc_surface_roads.png,figures/cuauhtemoc_atmospheric.png
+Tláhuac,tlahuac,59.7,40.75,27.84,13.18,31.85,18.24,24.93,102667,figures/tlahuac_surface_roads.png,figures/tlahuac_atmospheric.png
+Gustavo A. Madero,gustavo_a_madero,55.07,40.61,25.3,13.04,29.77,18.02,25.03,105337,figures/gustavo_a_madero_surface_roads.png,figures/gustavo_a_madero_atmospheric.png
+Coyoacán,coyoacan,55.84,39.37,27.96,11.79,27.87,16.81,23.9,64471,figures/coyoacan_surface_roads.png,figures/coyoacan_atmospheric.png
+Benito Juárez,benito_juarez,52.29,38.97,30.03,11.39,22.26,17.38,24.59,31993,figures/benito_juarez_surface_roads.png,figures/benito_juarez_atmospheric.png
+Miguel Hidalgo,miguel_hidalgo,53.98,37.89,22.65,10.32,31.33,17.38,24.59,55679,figures/miguel_hidalgo_surface_roads.png,figures/miguel_hidalgo_atmospheric.png
+Xochimilco,xochimilco,52.69,36.82,20.12,9.24,32.57,15.96,22.7,136223,figures/xochimilco_surface_roads.png,figures/xochimilco_atmospheric.png
+Álvaro Obregón,alvaro_obregon,54.76,32.84,15.94,5.26,38.82,16.16,23.35,115072,figures/alvaro_obregon_surface_roads.png,figures/alvaro_obregon_atmospheric.png
+Tlalpan,tlalpan,56.16,30.63,15.66,3.05,40.5,13.43,20.27,373958,figures/tlalpan_surface_roads.png,figures/tlalpan_atmospheric.png
+Milpa Alta,milpa_alta,56.63,30.31,16.41,2.74,40.21,14.71,21.22,354145,figures/milpa_alta_surface_roads.png,figures/milpa_alta_atmospheric.png
+Cuajimalpa de Morelos,cuajimalpa_de_morelos,51.36,26.94,13.9,-0.63,37.46,14.65,21.85,85907,figures/cuajimalpa_de_morelos_surface_roads.png,figures/cuajimalpa_de_morelos_atmospheric.png
+La Magdalena Contreras,la_magdalena_contreras,51.17,26.6,14.74,-0.97,36.43,14.27,21.31,76000,figures/la_magdalena_contreras_surface_roads.png,figures/la_magdalena_contreras_atmospheric.png

@@ -1,0 +1,296 @@
+[
+  {
+    "year": 2013,
+    "n_scenes_cloud80": 4,
+    "n_scenes_all": 4,
+    "mean_obs_per_pixel_cloud80": 2.16,
+    "mean_obs_per_pixel_all": 2.16,
+    "cloud80": {
+      "lst_mean_C": 37.722395945506015,
+      "t_rural_C": 32.21729005976981,
+      "suhi_mean_C": 5.51,
+      "lst_max_C": 56.99480594000002,
+      "lst_p98_C": 48.18444062348094
+    },
+    "all_scenes": {
+      "lst_mean_C": 37.722395945506015,
+      "t_rural_C": 32.21729005976981,
+      "suhi_mean_C": 5.51,
+      "lst_max_C": 56.99480594000002,
+      "lst_p98_C": 48.18444062348094
+    }
+  },
+  {
+    "year": 2014,
+    "n_scenes_cloud80": 6,
+    "n_scenes_all": 8,
+    "mean_obs_per_pixel_cloud80": 3.07,
+    "mean_obs_per_pixel_all": 3.24,
+    "cloud80": {
+      "lst_mean_C": 32.0127484220461,
+      "t_rural_C": 26.478299711506114,
+      "suhi_mean_C": 5.53,
+      "lst_max_C": 53.68274456000003,
+      "lst_p98_C": 45.31240871280855
+    },
+    "all_scenes": {
+      "lst_mean_C": 31.6669112147775,
+      "t_rural_C": 26.46588997535437,
+      "suhi_mean_C": 5.2,
+      "lst_max_C": 53.68274456000003,
+      "lst_p98_C": 44.94024455901471
+    }
+  },
+  {
+    "year": 2015,
+    "n_scenes_cloud80": 8,
+    "n_scenes_all": 8,
+    "mean_obs_per_pixel_cloud80": 4.66,
+    "mean_obs_per_pixel_all": 4.66,
+    "cloud80": {
+      "lst_mean_C": 30.50257428192224,
+      "t_rural_C": 25.061813016677522,
+      "suhi_mean_C": 5.44,
+      "lst_max_C": 53.058101405000016,
+      "lst_p98_C": 43.43108605514852
+    },
+    "all_scenes": {
+      "lst_mean_C": 30.50257428192224,
+      "t_rural_C": 25.061813016677522,
+      "suhi_mean_C": 5.44,
+      "lst_max_C": 53.058101405000016,
+      "lst_p98_C": 43.43108605514852
+    }
+  },
+  {
+    "year": 2016,
+    "n_scenes_cloud80": 8,
+    "n_scenes_all": 8,
+    "mean_obs_per_pixel_cloud80": 4.39,
+    "mean_obs_per_pixel_all": 4.39,
+    "cloud80": {
+      "lst_mean_C": 31.025005161867803,
+      "t_rural_C": 23.872517226554546,
+      "suhi_mean_C": 7.15,
+      "lst_max_C": 53.89893432500001,
+      "lst_p98_C": 44.809879878736
+    },
+    "all_scenes": {
+      "lst_mean_C": 31.025005161867803,
+      "t_rural_C": 23.872517226554546,
+      "suhi_mean_C": 7.15,
+      "lst_max_C": 53.89893432500001,
+      "lst_p98_C": 44.809879878736
+    }
+  },
+  {
+    "year": 2017,
+    "n_scenes_cloud80": 6,
+    "n_scenes_all": 7,
+    "mean_obs_per_pixel_cloud80": 2.8,
+    "mean_obs_per_pixel_all": 3.26,
+    "cloud80": {
+      "lst_mean_C": 30.469142371114007,
+      "t_rural_C": 23.262770556432823,
+      "suhi_mean_C": 7.21,
+      "lst_max_C": 57.774114500000024,
+      "lst_p98_C": 47.80830490683487
+    },
+    "all_scenes": {
+      "lst_mean_C": 27.534180385316677,
+      "t_rural_C": 21.318304281376076,
+      "suhi_mean_C": 6.22,
+      "lst_max_C": 55.70279438000003,
+      "lst_p98_C": 46.82384655125002
+    }
+  },
+  {
+    "year": 2018,
+    "n_scenes_cloud80": 6,
+    "n_scenes_all": 6,
+    "mean_obs_per_pixel_cloud80": 2.35,
+    "mean_obs_per_pixel_all": 2.35,
+    "cloud80": {
+      "lst_mean_C": 34.9884017589932,
+      "t_rural_C": 28.94932903544777,
+      "suhi_mean_C": 6.04,
+      "lst_max_C": 56.165081584999996,
+      "lst_p98_C": 46.31189836400003
+    },
+    "all_scenes": {
+      "lst_mean_C": 34.9884017589932,
+      "t_rural_C": 28.94932903544777,
+      "suhi_mean_C": 6.04,
+      "lst_max_C": 56.165081584999996,
+      "lst_p98_C": 46.31189836400003
+    }
+  },
+  {
+    "year": 2019,
+    "n_scenes_cloud80": 8,
+    "n_scenes_all": 8,
+    "mean_obs_per_pixel_cloud80": 4.43,
+    "mean_obs_per_pixel_all": 4.43,
+    "cloud80": {
+      "lst_mean_C": 31.298970438545794,
+      "t_rural_C": 25.771602211196065,
+      "suhi_mean_C": 5.53,
+      "lst_max_C": 54.49281530000002,
+      "lst_p98_C": 45.815135229389426
+    },
+    "all_scenes": {
+      "lst_mean_C": 31.298970438545794,
+      "t_rural_C": 25.771602211196065,
+      "suhi_mean_C": 5.53,
+      "lst_max_C": 54.49281530000002,
+      "lst_p98_C": 45.815135229389426
+    }
+  },
+  {
+    "year": 2020,
+    "n_scenes_cloud80": 8,
+    "n_scenes_all": 8,
+    "mean_obs_per_pixel_cloud80": 4.55,
+    "mean_obs_per_pixel_all": 4.55,
+    "cloud80": {
+      "lst_mean_C": 29.489157594701332,
+      "t_rural_C": 22.45951560208527,
+      "suhi_mean_C": 7.03,
+      "lst_max_C": 53.68445357000003,
+      "lst_p98_C": 46.07194413872305
+    },
+    "all_scenes": {
+      "lst_mean_C": 29.489157594701332,
+      "t_rural_C": 22.45951560208527,
+      "suhi_mean_C": 7.03,
+      "lst_max_C": 53.68445357000003,
+      "lst_p98_C": 46.07194413872305
+    }
+  },
+  {
+    "year": 2021,
+    "n_scenes_cloud80": 8,
+    "n_scenes_all": 8,
+    "mean_obs_per_pixel_cloud80": 4.51,
+    "mean_obs_per_pixel_all": 4.51,
+    "cloud80": {
+      "lst_mean_C": 28.82613175187556,
+      "t_rural_C": 22.979315358405675,
+      "suhi_mean_C": 5.85,
+      "lst_max_C": 53.509564880000006,
+      "lst_p98_C": 43.690252976349605
+    },
+    "all_scenes": {
+      "lst_mean_C": 28.82613175187556,
+      "t_rural_C": 22.979315358405675,
+      "suhi_mean_C": 5.85,
+      "lst_max_C": 53.509564880000006,
+      "lst_p98_C": 43.690252976349605
+    }
+  },
+  {
+    "year": 2022,
+    "n_scenes_cloud80": 16,
+    "n_scenes_all": 16,
+    "mean_obs_per_pixel_cloud80": 9.36,
+    "mean_obs_per_pixel_all": 9.36,
+    "cloud80": {
+      "lst_mean_C": 34.058167400080734,
+      "t_rural_C": 27.684424969249324,
+      "suhi_mean_C": 6.37,
+      "lst_max_C": 55.954659728750016,
+      "lst_p98_C": 47.054566002429176
+    },
+    "all_scenes": {
+      "lst_mean_C": 34.058167400080734,
+      "t_rural_C": 27.684424969249324,
+      "suhi_mean_C": 6.37,
+      "lst_max_C": 55.954659728750016,
+      "lst_p98_C": 47.054566002429176
+    }
+  },
+  {
+    "year": 2023,
+    "n_scenes_cloud80": 14,
+    "n_scenes_all": 14,
+    "mean_obs_per_pixel_cloud80": 6.07,
+    "mean_obs_per_pixel_all": 6.07,
+    "cloud80": {
+      "lst_mean_C": 31.885332243432824,
+      "t_rural_C": 25.782342535443632,
+      "suhi_mean_C": 6.1,
+      "lst_max_C": 57.37899138800001,
+      "lst_p98_C": 44.936858128104255
+    },
+    "all_scenes": {
+      "lst_mean_C": 31.885332243432824,
+      "t_rural_C": 25.782342535443632,
+      "suhi_mean_C": 6.1,
+      "lst_max_C": 57.37899138800001,
+      "lst_p98_C": 44.936858128104255
+    }
+  },
+  {
+    "year": 2024,
+    "n_scenes_cloud80": 14,
+    "n_scenes_all": 14,
+    "mean_obs_per_pixel_cloud80": 7.62,
+    "mean_obs_per_pixel_all": 7.62,
+    "cloud80": {
+      "lst_mean_C": 37.051038558110896,
+      "t_rural_C": 31.2455306161941,
+      "suhi_mean_C": 5.81,
+      "lst_max_C": 63.39476355500003,
+      "lst_p98_C": 49.31294800594691
+    },
+    "all_scenes": {
+      "lst_mean_C": 37.051038558110896,
+      "t_rural_C": 31.2455306161941,
+      "suhi_mean_C": 5.81,
+      "lst_max_C": 63.39476355500003,
+      "lst_p98_C": 49.31294800594691
+    }
+  },
+  {
+    "year": 2025,
+    "n_scenes_cloud80": 16,
+    "n_scenes_all": 16,
+    "mean_obs_per_pixel_cloud80": 8.62,
+    "mean_obs_per_pixel_all": 8.62,
+    "cloud80": {
+      "lst_mean_C": 34.251626957626286,
+      "t_rural_C": 28.14633869523332,
+      "suhi_mean_C": 6.11,
+      "lst_max_C": 55.40640321714287,
+      "lst_p98_C": 48.31041273813439
+    },
+    "all_scenes": {
+      "lst_mean_C": 34.251626957626286,
+      "t_rural_C": 28.14633869523332,
+      "suhi_mean_C": 6.11,
+      "lst_max_C": 55.40640321714287,
+      "lst_p98_C": 48.31041273813439
+    }
+  },
+  {
+    "year": 2026,
+    "n_scenes_cloud80": 14,
+    "n_scenes_all": 14,
+    "mean_obs_per_pixel_cloud80": 7.05,
+    "mean_obs_per_pixel_all": 7.05,
+    "cloud80": {
+      "lst_mean_C": 33.521147652056975,
+      "t_rural_C": 25.611701077873967,
+      "suhi_mean_C": 7.91,
+      "lst_max_C": 54.19943525,
+      "lst_p98_C": 46.0649517450542
+    },
+    "all_scenes": {
+      "lst_mean_C": 33.521147652056975,
+      "t_rural_C": 25.611701077873967,
+      "suhi_mean_C": 7.91,
+      "lst_max_C": 54.19943525,
+      "lst_p98_C": 46.0649517450542
+    }
+  }
+]
