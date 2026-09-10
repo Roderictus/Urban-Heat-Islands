@@ -1,0 +1,183 @@
+{
+  "city": "Paris",
+  "window": "1 April \u2013 31 May",
+  "composite": "amplio",
+  "scene_cloud_filter": null,
+  "pixel_mask": "QA_PIXEL fill + cloud + cloud-shadow; LST 0\u201380 \u00b0C",
+  "threshold_C": 25.0,
+  "scale_max_C": 35.0,
+  "timezone": "Europe/Paris",
+  "lst_hours": "~12 h 40 locale (10 h 40 UTC)",
+  "geometry": "OSM relation 7444",
+  "years": [
+    {
+      "year": 2015,
+      "n_scenes": 4,
+      "n_landsat8": 4,
+      "n_landsat9": 0,
+      "n_dates": 4,
+      "dates": [
+        "2015-04-20",
+        "2015-04-29",
+        "2015-05-06",
+        "2015-05-22"
+      ],
+      "mean_obs_per_pixel": 2.46
+    },
+    {
+      "year": 2016,
+      "n_scenes": 4,
+      "n_landsat8": 4,
+      "n_landsat9": 0,
+      "n_dates": 4,
+      "dates": [
+        "2016-04-06",
+        "2016-04-22",
+        "2016-05-01",
+        "2016-05-08"
+      ],
+      "mean_obs_per_pixel": 2.0
+    },
+    {
+      "year": 2017,
+      "n_scenes": 4,
+      "n_landsat8": 4,
+      "n_landsat9": 0,
+      "n_dates": 4,
+      "dates": [
+        "2017-04-09",
+        "2017-04-25",
+        "2017-05-11",
+        "2017-05-27"
+      ],
+      "mean_obs_per_pixel": 2.74
+    },
+    {
+      "year": 2018,
+      "n_scenes": 2,
+      "n_landsat8": 2,
+      "n_landsat9": 0,
+      "n_dates": 2,
+      "dates": [
+        "2018-04-12",
+        "2018-05-30"
+      ],
+      "mean_obs_per_pixel": 1.0
+    },
+    {
+      "year": 2019,
+      "n_scenes": 3,
+      "n_landsat8": 3,
+      "n_landsat9": 0,
+      "n_dates": 3,
+      "dates": [
+        "2019-04-15",
+        "2019-05-01",
+        "2019-05-17"
+      ],
+      "mean_obs_per_pixel": 2.28
+    },
+    {
+      "year": 2020,
+      "n_scenes": 3,
+      "n_landsat8": 3,
+      "n_landsat9": 0,
+      "n_dates": 3,
+      "dates": [
+        "2020-04-01",
+        "2020-04-17",
+        "2020-05-19"
+      ],
+      "mean_obs_per_pixel": 3.0
+    },
+    {
+      "year": 2021,
+      "n_scenes": 3,
+      "n_landsat8": 3,
+      "n_landsat9": 0,
+      "n_dates": 3,
+      "dates": [
+        "2021-04-04",
+        "2021-04-20",
+        "2021-05-22"
+      ],
+      "mean_obs_per_pixel": 2.61
+    },
+    {
+      "year": 2022,
+      "n_scenes": 7,
+      "n_landsat8": 4,
+      "n_landsat9": 3,
+      "n_dates": 7,
+      "dates": [
+        "2022-04-07",
+        "2022-04-15",
+        "2022-04-23",
+        "2022-05-01",
+        "2022-05-09",
+        "2022-05-17",
+        "2022-05-25"
+      ],
+      "mean_obs_per_pixel": 4.86
+    },
+    {
+      "year": 2023,
+      "n_scenes": 5,
+      "n_landsat8": 2,
+      "n_landsat9": 3,
+      "n_dates": 5,
+      "dates": [
+        "2023-04-18",
+        "2023-04-26",
+        "2023-05-04",
+        "2023-05-20",
+        "2023-05-28"
+      ],
+      "mean_obs_per_pixel": 4.05
+    },
+    {
+      "year": 2024,
+      "n_scenes": 4,
+      "n_landsat8": 1,
+      "n_landsat9": 3,
+      "n_dates": 4,
+      "dates": [
+        "2024-04-04",
+        "2024-04-12",
+        "2024-05-06",
+        "2024-05-22"
+      ],
+      "mean_obs_per_pixel": 2.84
+    },
+    {
+      "year": 2025,
+      "n_scenes": 3,
+      "n_landsat8": 1,
+      "n_landsat9": 2,
+      "n_dates": 3,
+      "dates": [
+        "2025-04-07",
+        "2025-05-01",
+        "2025-05-09"
+      ],
+      "mean_obs_per_pixel": 3.0
+    },
+    {
+      "year": 2026,
+      "n_scenes": 7,
+      "n_landsat8": 3,
+      "n_landsat9": 4,
+      "n_dates": 7,
+      "dates": [
+        "2026-04-10",
+        "2026-04-18",
+        "2026-04-26",
+        "2026-04-27",
+        "2026-05-12",
+        "2026-05-20",
+        "2026-05-28"
+      ],
+      "mean_obs_per_pixel": 5.71
+    }
+  ]
+}

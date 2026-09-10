@@ -1,0 +1,15 @@
+{
+  "title": "Îlots de chaleur à Montpellier",
+  "window": "1 avril – 31 mai 2026",
+  "n_landsat": 21,
+  "t_city": 29.39,
+  "t_rural": 23.82,
+  "suhi_C": 5.57,
+  "lst_peak_C": 34.82,
+  "lst_scene_max_C": 57.76,
+  "lst_composite_max_C": 41.88,
+  "lst_p98_C": 34.82,
+  "lst_cut": 30.0,
+  "rural_buffer_m": 20000,
+  "geometry": "OSM relation 28722, commune de Montpellier"
+}

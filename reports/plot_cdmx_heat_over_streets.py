@@ -1,11 +1,19 @@
-"""LST > 38 C transparent overlay on satellite streets: CDMX and each alcaldia."""
+"""LST > 35 C transparent overlay on satellite streets: CDMX and each alcaldia.
+
+Pixel-mean of every Landsat 8/9 scene in April–May (pixel cloud/fill/valid
+mask, no scene-level CLOUD_COVER cut). Shared color scale 35–48 °C.
+"""
 from __future__ import annotations
 
 import io
 import math
+import os
 import re
 import unicodedata
 from pathlib import Path
+
+os.environ.setdefault("MPLBACKEND", "Agg")
+os.environ.setdefault("PYTHONIOENCODING", "utf-8")
 
 import ee
 import geemap
@@ -29,6 +37,7 @@ LST_HOURS = "~10:30 local (16:30 UTC)"
 LST_FORMULA = "LST = 0.00341802×DN + 149 − 273.15 (°C)"
 LST_SOURCE = "USGS Landsat 8/9 Collection 2 Level-2 ST_B10"
 THRESHOLD = 35.0
+SCALE_MAX = 48.0
 NAME_TAG = "_35c"
 HEAT_ALPHA = 0.55
 HEAT_PALETTE = ["#f6c445", "#f08c2b", "#e31a1c", "#9b0d0d"]
@@ -59,14 +68,74 @@ def prep_lst(image):
     return cloud_mask(image).addBands(st, None, True).select("ST_C").updateMask(valid)
 
 
-def load_lst(cid, bounds_geom):
-    return (
+def load_lst(cid, bounds_geom, cloud_max=None):
+    col = (
         ee.ImageCollection(cid)
         .filterBounds(bounds_geom)
         .filterDate(START, END)
-        .filter(ee.Filter.lt("CLOUD_COVER", 80))
         .map(prep_lst)
     )
+    if cloud_max is not None:
+        col = col.filter(ee.Filter.lt("CLOUD_COVER", cloud_max))
+    return col
+
+
+def lst_overpass_hours(
+    bounds_geom,
+    start,
+    end,
+    tz_name,
+    lang="en",
+    fallback=None,
+    limit=40,
+):
+    """Median Landsat 8/9 scene time, converted to local civil time.
+
+    Descending overpass is ~10:00 solar time, so clock hour follows the
+    city's timezone (CDMX ~10:30, France in April–May ~12:30 CEST).
+    """
+    from datetime import datetime, timezone
+    from statistics import median
+    from zoneinfo import ZoneInfo
+
+    fallback = fallback or {
+        "label": LST_HOURS,
+        "local": "10:30",
+        "utc": "16:30",
+        "tz_name": tz_name,
+    }
+    col = (
+        ee.ImageCollection("LANDSAT/LC08/C02/T1_L2")
+        .merge(ee.ImageCollection("LANDSAT/LC09/C02/T1_L2"))
+        .filterBounds(bounds_geom)
+        .filterDate(start, end)
+    )
+    millis = col.limit(limit).aggregate_array("system:time_start").getInfo() or []
+    if not millis:
+        return fallback
+    zone = ZoneInfo(tz_name)
+    local_mins, utc_mins = [], []
+    for ms in millis:
+        utc = datetime.fromtimestamp(ms / 1000.0, tz=timezone.utc)
+        loc = utc.astimezone(zone)
+        local_mins.append(loc.hour * 60 + loc.minute)
+        utc_mins.append(utc.hour * 60 + utc.minute)
+
+    def round_hhmm(values):
+        total = int(5 * round(median(values) / 5.0)) % (24 * 60)
+        return divmod(total, 60)
+
+    lh, lm = round_hhmm(local_mins)
+    uh, um = round_hhmm(utc_mins)
+    if lang == "fr":
+        local = f"~{lh} h {lm:02d}"
+        utc = f"{uh} h {um:02d}"
+        label = f"{local} locale ({utc} UTC)"
+    else:
+        local = f"~{lh}:{lm:02d}"
+        utc = f"{uh}:{um:02d}"
+        label = f"{local} local ({utc} UTC)"
+    return {"label": label, "local": local.lstrip("~"), "utc": utc, "tz_name": tz_name}
 
 
 def lonlat_to_merc(lon, lat):
@@ -312,8 +381,9 @@ def save_poster(
             alpha=0.95,
         )
     caption = overlay_caption or (
-        f"{LST_SOURCE}\n{PERIOD}  |  {LST_HOURS}\n{LST_FORMULA}\n"
-        f"Overlay: surface temperature > {THRESHOLD:.0f} °C"
+        f"{LST_SOURCE}\n{PERIOD}  |  {LST_HOURS}\n"
+        f"Pixel-mean of all scenes  |  pixel cloud/fill/valid mask\n"
+        f"{LST_FORMULA}\nOverlay: surface temperature > {THRESHOLD:.0f} °C"
     )
     fig.text(
         0.04,
@@ -418,13 +488,13 @@ if __name__ == "__main__":
     city_bounds = (west - CITY_PAD, south - CITY_PAD, east + CITY_PAD, north + CITY_PAD)
     city_region = ee.Geometry.Rectangle(list(city_bounds), proj="EPSG:4326", geodesic=False)
 
-    print("Building Landsat LST composite...", flush=True)
-    lst = (
-        load_lst("LANDSAT/LC08/C02/T1_L2", city_region)
-        .merge(load_lst("LANDSAT/LC09/C02/T1_L2", city_region))
-        .mean()
-        .clip(aoi)
+    print("Building Landsat LST amplio composite (all scenes, pixel mask)...", flush=True)
+    col = load_lst("LANDSAT/LC08/C02/T1_L2", city_region).merge(
+        load_lst("LANDSAT/LC09/C02/T1_L2", city_region)
     )
+    n_scenes = int(col.size().getInfo())
+    lst = col.mean().clip(aoi)
+    print(f"{n_scenes} scenes", flush=True)
     stats = lst.updateMask(lst.gt(THRESHOLD)).reduceRegion(
         reducer=ee.Reducer.minMax().combine(ee.Reducer.percentile([98]), sharedInputs=True),
         geometry=aoi,
@@ -434,10 +504,19 @@ if __name__ == "__main__":
     ).getInfo()
     print("hot stats", stats, flush=True)
     heat_abs_max = float(stats.get("ST_C_max") or 50.0)
-    heat_max = float(stats.get("ST_C_p98") or heat_abs_max)
-    heat_max = max(THRESHOLD + 2.0, min(heat_max, heat_abs_max))
+    heat_max = SCALE_MAX
     hot = lst.updateMask(lst.gt(THRESHOLD))
     vis = {"min": THRESHOLD, "max": heat_max, "palette": HEAT_PALETTE}
+    overlay_caption = (
+        f"{LST_SOURCE}\n{PERIOD}  |  {LST_HOURS}\n"
+        f"Composite amplio: media por píxel de {n_scenes} escenas\n"
+        f"Máscara de nubes/relleno/rango válido por píxel\n"
+        f"Overlay: temperatura de superficie > {THRESHOLD:.0f} °C"
+    )
+    footer = (
+        f"{n_scenes} escenas   ·   corte {THRESHOLD:.0f} °C   ·   "
+        f"máx {heat_abs_max:.1f} °C"
+    )
 
     make_map(
         city_geom,
@@ -450,6 +529,8 @@ if __name__ == "__main__":
         heat_max,
         heat_abs_max,
         outline_w=3,
+        overlay_caption=overlay_caption,
+        footer=footer,
     )
 
     for _, row in alc_gdf.sort_values("alcaldia").iterrows():
@@ -468,6 +549,8 @@ if __name__ == "__main__":
             heat_max,
             heat_abs_max,
             outline_w=2,
+            overlay_caption=overlay_caption,
+            footer=footer,
         )
 
     print("done", flush=True)

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Îlots de chaleur à Paris — avril et mai 2026</title>
+  <style>
+    :root { --ink:#1a1a1a; --muted:#555; --line:#e6e1d8; }
+    body { margin:0; color:var(--ink); background:#f7f4ef; font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif; line-height:1.55; }
+    header { background:#111; color:#fff; padding:36px 20px 28px; }
+    header .wrap, main, footer .wrap { max-width:960px; margin:0 auto; }
+    h1 { font-size:1.85rem; margin:0 0 8px; }
+    .kicker { color:#f0c27a; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; }
+    main { padding:28px 20px 64px; }
+    figure { margin:0 0 1.4rem; }
+    figure img { width:100%; height:auto; background:#111; display:block; }
+    figcaption { font-size:0.88rem; color:var(--muted); margin-top:8px; }
+    .method { background:#fff; border:1px solid var(--line); padding:1rem 1.1rem; }
+    table { width:100%; border-collapse:collapse; background:#fff; }
+    th, td { border-bottom:1px solid var(--line); padding:8px 10px; text-align:right; }
+    th:first-child, td:first-child { text-align:left; }
+    .gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+    .tile figcaption { font-size:0.8rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="kicker">Anaplian.com · télédétection urbaine</div>
+      <h1>Îlots de chaleur à Paris</h1>
+      <p>Avril et mai 2026 · Landsat 8 et 9 · 20 arrondissements · température de surface et NDVI</p>
+    </div>
+  </header>
+  <main>
+    <h2>Pourquoi cette étude</h2>
+    <p>La hausse de la température moyenne de la planète aggrave la vulnérabilité aux chaleurs excessives. Il ne s'agit pas seulement d'un degré de plus dans la moyenne globale : cette hausse pousse davantage de journées au-delà de seuils dangereux pour la santé, le travail en extérieur et les réseaux d'eau et d'énergie. En ville, le risque se concentre. L'asphalte, le béton, les toitures sombres et le métal absorbent une grande part du rayonnement solaire et le restituent en chaleur. Rues étroites et immeubles forment des canyons qui piègent l'air chaud. Le résultat : des îlots de chaleur — parkings, hangars, avenues et toitures où la surface atteint des températures que le corps ne tolère pas en exposition prolongée.</p>
+    <p>Avec Landsat 8 et Landsat 9, nous cartographions les surfaces les plus chaudes de Paris et de ses 20 arrondissements. La carte est la moyenne par pixel de 7 scènes d'avril et mai 2026, acquises vers 12 h 40, heure locale. Sur chaque pixel, nuages, ombres et valeurs invalides sont masqués avant de moyenner ; on ne jette pas la scène entière. Le capteur thermique — bande 10, entre 10,6 et 11,2 micromètres — estime la chaleur du sol, des toits et du bitume, pas celle de l'air à l'ombre. Seules les surfaces au-dessus de 25 °C sont coloriées. En parallèle, le NDVI montre où la végétation est dense. La température de la commune se compare à la moyenne des zones rurales dans un rayon de 20 km (ceinture verte d'Île-de-France). Le 98e centile du composite atteint 27.9 °C ; l'écart urbain–rural (SUHI) est de +3.6 °C.</p>
+    <p>Ces pics ne sont pas un épisode isolé : avec davantage de vagues de chaleur et de surfaces imperméables, ils tendent à s'aggraver. Ils servent à repérer des lieux d'intervention. L'urbanisme tactique permet de tester ombres temporaires, peinture à fort albédo dans les cours d'école, et trottoirs plus perméables. La végétation reste le levier le plus durable : un arbre intercepte le soleil et rafraîchit l'air par transpiration. Bois de Boulogne, bois de Vincennes, coulées de la Seine et toitures végétalisées réduisent la charge thermique. La donnée satellitaire n'indique pas le projet local ; elle montre où agir d'abord.</p>
+    <p><em>À Paris, au printemps 2026, la température moyenne de surface de la commune est de 21.9 °C, contre 18.3 °C dans la ceinture rurale (+3.6 °C). Le NDVI moyen est de 0.35. 9e arrondissement est l'arrondissement le plus chaud en moyenne ; 16e arrondissement le plus frais ; 12e arrondissement le plus végétalisé.</em></p>
+    <h2>La commune, surfaces les plus chaudes</h2>
+    <figure>
+      <img src="assets/01_paris_transparence.png" alt="Paris, température de surface">
+      <figcaption>Températures de surface au-dessus de 25 °C, en semi-transparence sur l'image satellite.</figcaption>
+    </figure>
+    <h2>Végétation et chaleur, côte à côte</h2>
+    <figure>
+      <img src="assets/02_vegetation_temperature.png" alt="NDVI et température de surface à Paris">
+      <figcaption>À gauche, verdure (NDVI). À droite, température de surface de la même fenêtre.</figcaption>
+    </figure>
+    <h2>Les 20 arrondissements</h2>
+    <figure><img src="assets/03_barres_temperature_max.png" alt="Température maximale par arrondissement"></figure>
+    <figure><img src="assets/04_barres_temperature_moyenne.png" alt="Température moyenne par arrondissement"></figure>
+    <figure><img src="assets/05_barres_ndvi.png" alt="NDVI moyen par arrondissement"></figure>
+    <table>
+      <thead><tr><th>Arrondissement</th><th>Max °C</th><th>Moyenne °C</th><th>SUHI °C</th><th>NDVI</th></tr></thead>
+      <tbody><tr><td>9e arrondissement</td><td>47.6</td><td>25.0</td><td>+6.7</td><td>0.12</td></tr>
+<tr><td>8e arrondissement</td><td>50.8</td><td>24.5</td><td>+6.2</td><td>0.21</td></tr>
+<tr><td>10e arrondissement</td><td>50.5</td><td>24.5</td><td>+6.2</td><td>0.18</td></tr>
+<tr><td>2e arrondissement</td><td>47.3</td><td>24.1</td><td>+5.8</td><td>0.09</td></tr>
+<tr><td>17e arrondissement</td><td>51.2</td><td>23.6</td><td>+5.2</td><td>0.25</td></tr>
+<tr><td>19e arrondissement</td><td>54.0</td><td>23.5</td><td>+5.2</td><td>0.35</td></tr>
+<tr><td>18e arrondissement</td><td>52.4</td><td>23.3</td><td>+4.9</td><td>0.25</td></tr>
+<tr><td>13e arrondissement</td><td>53.7</td><td>22.9</td><td>+4.5</td><td>0.32</td></tr>
+<tr><td>4e arrondissement</td><td>48.7</td><td>22.7</td><td>+4.4</td><td>0.20</td></tr>
+<tr><td>11e arrondissement</td><td>48.5</td><td>22.7</td><td>+4.4</td><td>0.22</td></tr>
+<tr><td>3e arrondissement</td><td>47.2</td><td>22.4</td><td>+4.1</td><td>0.15</td></tr>
+<tr><td>1er arrondissement</td><td>48.0</td><td>22.3</td><td>+4.0</td><td>0.18</td></tr>
+<tr><td>14e arrondissement</td><td>50.0</td><td>22.1</td><td>+3.8</td><td>0.35</td></tr>
+<tr><td>20e arrondissement</td><td>53.1</td><td>21.9</td><td>+3.6</td><td>0.35</td></tr>
+<tr><td>5e arrondissement</td><td>46.9</td><td>21.7</td><td>+3.4</td><td>0.25</td></tr>
+<tr><td>15e arrondissement</td><td>56.5</td><td>21.5</td><td>+3.2</td><td>0.30</td></tr>
+<tr><td>6e arrondissement</td><td>47.5</td><td>21.2</td><td>+2.9</td><td>0.23</td></tr>
+<tr><td>7e arrondissement</td><td>47.6</td><td>21.2</td><td>+2.9</td><td>0.29</td></tr>
+<tr><td>12e arrondissement</td><td>55.7</td><td>20.7</td><td>+2.4</td><td>0.54</td></tr>
+<tr><td>16e arrondissement</td><td>50.2</td><td>19.3</td><td>+1.0</td><td>0.51</td></tr></tbody>
+    </table>
+    <h2>Galerie</h2>
+    <div class="gallery"><figure class="tile"><img src="assets/galerie_arrondissements/01_paris_heat_over_streets_25c.jpg" alt="Paris"><figcaption>Paris</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/02_9e_heat_over_streets_25c.jpg" alt="9e arrondissement"><figcaption>9e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/03_8e_heat_over_streets_25c.jpg" alt="8e arrondissement"><figcaption>8e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/04_10e_heat_over_streets_25c.jpg" alt="10e arrondissement"><figcaption>10e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/05_2e_heat_over_streets_25c.jpg" alt="2e arrondissement"><figcaption>2e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/06_17e_heat_over_streets_25c.jpg" alt="17e arrondissement"><figcaption>17e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/07_19e_heat_over_streets_25c.jpg" alt="19e arrondissement"><figcaption>19e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/08_18e_heat_over_streets_25c.jpg" alt="18e arrondissement"><figcaption>18e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/09_13e_heat_over_streets_25c.jpg" alt="13e arrondissement"><figcaption>13e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/10_4e_heat_over_streets_25c.jpg" alt="4e arrondissement"><figcaption>4e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/11_11e_heat_over_streets_25c.jpg" alt="11e arrondissement"><figcaption>11e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/12_3e_heat_over_streets_25c.jpg" alt="3e arrondissement"><figcaption>3e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/13_1er_heat_over_streets_25c.jpg" alt="1er arrondissement"><figcaption>1er arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/14_14e_heat_over_streets_25c.jpg" alt="14e arrondissement"><figcaption>14e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/15_20e_heat_over_streets_25c.jpg" alt="20e arrondissement"><figcaption>20e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/16_5e_heat_over_streets_25c.jpg" alt="5e arrondissement"><figcaption>5e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/17_15e_heat_over_streets_25c.jpg" alt="15e arrondissement"><figcaption>15e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/18_6e_heat_over_streets_25c.jpg" alt="6e arrondissement"><figcaption>6e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/19_7e_heat_over_streets_25c.jpg" alt="7e arrondissement"><figcaption>7e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/20_12e_heat_over_streets_25c.jpg" alt="12e arrondissement"><figcaption>12e arrondissement</figcaption></figure><figure class="tile"><img src="assets/galerie_arrondissements/21_16e_heat_over_streets_25c.jpg" alt="16e arrondissement"><figcaption>16e arrondissement</figcaption></figure></div>
+    <h2>Comment c'est fait</h2>
+    <p class="method">Les cartes sont un composite large : la moyenne par pixel des 7 scènes Landsat 8 et Landsat 9 (Collection 2, niveau 2) acquises entre le 1er avril et le 31 mai 2026. On ne jette pas une scène entière pour cause de nuages : sur chaque pixel, le remplissage, les nuages, les ombres et les températures hors de la plage valide (0 à 80 °C) sont masqués, puis les observations utiles sont moyennées. Les satellites survolent Paris vers 12 h 40, heure locale (près de 10 h 40 UTC). Ce qui est peint n'est pas l'air à l'ombre, mais la température de surface — toits, asphalte, sol nu et végétation — avec la bande 10 de l'infrarouge thermique (10,6 à 11,2 micromètres ; LST = 0,00341802 × DN + 149 − 273,15). En jaune à rouge n'apparaissent que les surfaces au-dessus de 25 °C. Le verdure est mesuré par le NDVI (rouge et proche infrarouge). L'écart urbain–rural soustrait 18.3 °C, moyenne des classes rurales du GHSL 2020 (SMOD 11, 12 et 13, hors eau) dans un rayon de 20 km autour de la commune. Les 20 arrondissements municipaux viennent des données ouvertes de la Ville de Paris.</p>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Anaplian.com</strong> · USGS Landsat 8/9 C2 L2 · NDVI (B4/B5) · LST bande 10 ·
+      référence rurale GHSL 2020 · 7 scènes · avril–mai 2026
+    </div>
+  </footer>
+</body>
+</html>

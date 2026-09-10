@@ -1,0 +1,221 @@
+{
+  "title": "Îlots de chaleur à Paris",
+  "window": "1 avril – 31 mai 2026",
+  "n_landsat": 7,
+  "t_city": 21.89,
+  "t_rural": 18.32,
+  "suhi_C": 3.57,
+  "lst_p98_C": 27.94,
+  "lst_scene_max_C": 56.54,
+  "lst_composite_max_C": 35.66,
+  "ndvi_mean": 0.349,
+  "lst_cut": 25.0,
+  "scale_max_C": 33.0,
+  "rural_buffer_m": 20000,
+  "hottest": "9e arrondissement",
+  "coolest": "16e arrondissement",
+  "greenest": "12e arrondissement",
+  "geometry": "OSM relation 7444 + opendata.paris.fr arrondissements",
+  "profiles": [
+    {
+      "c_ar": 9,
+      "arrondissement": "9e arrondissement",
+      "slug": "9e",
+      "lst_mean_C": 24.99,
+      "lst_peak_C": 47.57,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.12,
+      "suhi_C": 6.67
+    },
+    {
+      "c_ar": 8,
+      "arrondissement": "8e arrondissement",
+      "slug": "8e",
+      "lst_mean_C": 24.5,
+      "lst_peak_C": 50.81,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.21,
+      "suhi_C": 6.18
+    },
+    {
+      "c_ar": 10,
+      "arrondissement": "10e arrondissement",
+      "slug": "10e",
+      "lst_mean_C": 24.48,
+      "lst_peak_C": 50.46,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.178,
+      "suhi_C": 6.16
+    },
+    {
+      "c_ar": 2,
+      "arrondissement": "2e arrondissement",
+      "slug": "2e",
+      "lst_mean_C": 24.07,
+      "lst_peak_C": 47.33,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.094,
+      "suhi_C": 5.75
+    },
+    {
+      "c_ar": 17,
+      "arrondissement": "17e arrondissement",
+      "slug": "17e",
+      "lst_mean_C": 23.56,
+      "lst_peak_C": 51.19,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.246,
+      "suhi_C": 5.24
+    },
+    {
+      "c_ar": 19,
+      "arrondissement": "19e arrondissement",
+      "slug": "19e",
+      "lst_mean_C": 23.48,
+      "lst_peak_C": 53.96,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.347,
+      "suhi_C": 5.16
+    },
+    {
+      "c_ar": 18,
+      "arrondissement": "18e arrondissement",
+      "slug": "18e",
+      "lst_mean_C": 23.26,
+      "lst_peak_C": 52.41,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.251,
+      "suhi_C": 4.94
+    },
+    {
+      "c_ar": 13,
+      "arrondissement": "13e arrondissement",
+      "slug": "13e",
+      "lst_mean_C": 22.86,
+      "lst_peak_C": 53.71,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.315,
+      "suhi_C": 4.54
+    },
+    {
+      "c_ar": 4,
+      "arrondissement": "4e arrondissement",
+      "slug": "4e",
+      "lst_mean_C": 22.7,
+      "lst_peak_C": 48.67,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.195,
+      "suhi_C": 4.38
+    },
+    {
+      "c_ar": 11,
+      "arrondissement": "11e arrondissement",
+      "slug": "11e",
+      "lst_mean_C": 22.7,
+      "lst_peak_C": 48.5,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.22,
+      "suhi_C": 4.38
+    },
+    {
+      "c_ar": 3,
+      "arrondissement": "3e arrondissement",
+      "slug": "3e",
+      "lst_mean_C": 22.44,
+      "lst_peak_C": 47.18,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.153,
+      "suhi_C": 4.12
+    },
+    {
+      "c_ar": 1,
+      "arrondissement": "1er arrondissement",
+      "slug": "1er",
+      "lst_mean_C": 22.34,
+      "lst_peak_C": 48.02,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.183,
+      "suhi_C": 4.03
+    },
+    {
+      "c_ar": 14,
+      "arrondissement": "14e arrondissement",
+      "slug": "14e",
+      "lst_mean_C": 22.15,
+      "lst_peak_C": 50.05,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.353,
+      "suhi_C": 3.83
+    },
+    {
+      "c_ar": 20,
+      "arrondissement": "20e arrondissement",
+      "slug": "20e",
+      "lst_mean_C": 21.95,
+      "lst_peak_C": 53.07,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.349,
+      "suhi_C": 3.63
+    },
+    {
+      "c_ar": 5,
+      "arrondissement": "5e arrondissement",
+      "slug": "5e",
+      "lst_mean_C": 21.73,
+      "lst_peak_C": 46.85,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.254,
+      "suhi_C": 3.41
+    },
+    {
+      "c_ar": 15,
+      "arrondissement": "15e arrondissement",
+      "slug": "15e",
+      "lst_mean_C": 21.54,
+      "lst_peak_C": 56.54,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.297,
+      "suhi_C": 3.22
+    },
+    {
+      "c_ar": 6,
+      "arrondissement": "6e arrondissement",
+      "slug": "6e",
+      "lst_mean_C": 21.23,
+      "lst_peak_C": 47.51,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.228,
+      "suhi_C": 2.92
+    },
+    {
+      "c_ar": 7,
+      "arrondissement": "7e arrondissement",
+      "slug": "7e",
+      "lst_mean_C": 21.23,
+      "lst_peak_C": 47.64,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.287,
+      "suhi_C": 2.91
+    },
+    {
+      "c_ar": 12,
+      "arrondissement": "12e arrondissement",
+      "slug": "12e",
+      "lst_mean_C": 20.69,
+      "lst_peak_C": 55.66,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.536,
+      "suhi_C": 2.38
+    },
+    {
+      "c_ar": 16,
+      "arrondissement": "16e arrondissement",
+      "slug": "16e",
+      "lst_mean_C": 19.28,
+      "lst_peak_C": 50.23,
+      "lst_p98_C": null,
+      "ndvi_mean": 0.509,
+      "suhi_C": 0.96
+    }
+  ]
+}

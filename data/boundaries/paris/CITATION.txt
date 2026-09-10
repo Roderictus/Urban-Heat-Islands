@@ -1,0 +1,6 @@
+Ville de Paris et 20 arrondissements municipaux.
+Commune: OpenStreetMap relation 7444 (Nominatim).
+Arrondissements: Ville de Paris open data (opendata.paris.fr, dataset arrondissements).
+https://opendata.paris.fr/explore/dataset/arrondissements/
+https://www.openstreetmap.org/relation/7444
+License: ODbL 1.0 / Licence Ouverte.

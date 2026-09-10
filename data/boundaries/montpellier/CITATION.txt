@@ -1,0 +1,4 @@
+Commune de Montpellier (Hérault, France).
+Geometry: OpenStreetMap Nominatim, osm_id=28722.
+https://www.openstreetmap.org/relation/28722
+License: ODbL 1.0. https://www.openstreetmap.org/copyright

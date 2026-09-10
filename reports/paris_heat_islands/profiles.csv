@@ -1,0 +1,21 @@
+c_ar,arrondissement,slug,lst_mean_C,lst_peak_C,lst_p98_C,ndvi_mean,suhi_C
+9,9e arrondissement,9e,24.99,47.57,,0.12,6.67
+8,8e arrondissement,8e,24.5,50.81,,0.21,6.18
+10,10e arrondissement,10e,24.48,50.46,,0.178,6.16
+2,2e arrondissement,2e,24.07,47.33,,0.094,5.75
+17,17e arrondissement,17e,23.56,51.19,,0.246,5.24
+19,19e arrondissement,19e,23.48,53.96,,0.347,5.16
+18,18e arrondissement,18e,23.26,52.41,,0.251,4.94
+13,13e arrondissement,13e,22.86,53.71,,0.315,4.54
+4,4e arrondissement,4e,22.7,48.67,,0.195,4.38
+11,11e arrondissement,11e,22.7,48.5,,0.22,4.38
+3,3e arrondissement,3e,22.44,47.18,,0.153,4.12
+1,1er arrondissement,1er,22.34,48.02,,0.183,4.03
+14,14e arrondissement,14e,22.15,50.05,,0.353,3.83
+20,20e arrondissement,20e,21.95,53.07,,0.349,3.63
+5,5e arrondissement,5e,21.73,46.85,,0.254,3.41
+15,15e arrondissement,15e,21.54,56.54,,0.297,3.22
+6,6e arrondissement,6e,21.23,47.51,,0.228,2.92
+7,7e arrondissement,7e,21.23,47.64,,0.287,2.91
+12,12e arrondissement,12e,20.69,55.66,,0.536,2.38
+16,16e arrondissement,16e,19.28,50.23,,0.509,0.96

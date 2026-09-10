@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Îlots de chaleur Montpellier · avril–mai · seuil 30 °C</title>
+  <style>
+    :root { --ink:#f4f4f4; --muted:#9a9a9a; --accent:#f08c2b; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: #050505; color: var(--ink);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 28px 18px 48px; }
+    h1 { font-size: 1.45rem; margin: 0 0 6px; letter-spacing: -0.02em; }
+    .kicker { color: var(--accent); letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.72rem; }
+    .year {
+      font-size: clamp(2.8rem, 8vw, 4.4rem); font-weight: 800;
+      letter-spacing: -0.04em; margin: 12px 0 4px; line-height: 1;
+    }
+    .meta { color: var(--muted); font-size: 0.92rem; margin-bottom: 14px; }
+    .stage { position: relative; background: #050505; }
+    .stage img { width: 100%; height: auto; display: block; }
+    .watermark {
+      position: absolute; right: 14px; bottom: 12px;
+      font-size: 1.55rem; font-weight: 800; color: #d8d8d8;
+      text-shadow: 0 1px 8px #000; pointer-events: none; opacity: 0.92;
+    }
+    .controls { margin-top: 16px; }
+    input[type=range] {
+      width: 100%; accent-color: var(--accent); height: 8px;
+    }
+    .ticks {
+      display: flex; justify-content: space-between; color: var(--muted);
+      font-size: 0.72rem; margin-top: 4px;
+    }
+    .play {
+      margin-top: 12px; background: var(--accent); color: #111; border: 0;
+      padding: 8px 16px; font-weight: 700; cursor: pointer; border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="kicker">Anaplian.com · télédétection urbaine</div>
+    <h1>Îlots de chaleur à Montpellier</h1>
+    <div class="year" id="yearLabel">2015</div>
+    <p class="meta">Avril–mai · ~12 h 25 locale (10 h 25 UTC) · composite large Landsat 8/9 · nuages/remplissage/plage valide par pixel · température de surface &gt; 30 °C</p>
+    <div class="stage">
+      <img id="frame" src="frames/montpellier_2015_30c.png" alt="Montpellier 2015">
+      <div class="watermark">Anaplian.com</div>
+    </div>
+    <div class="controls">
+      <input id="slider" type="range" min="0" max="11" value="0" step="1">
+      <div class="ticks"><span>2015</span><span>2016</span><span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+      <button class="play" id="play" type="button">Lire</button>
+    </div>
+  </div>
+  <script>
+    const years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+    const files = ["montpellier_2015_30c.png", "montpellier_2016_30c.png", "montpellier_2017_30c.png", "montpellier_2018_30c.png", "montpellier_2019_30c.png", "montpellier_2020_30c.png", "montpellier_2021_30c.png", "montpellier_2022_30c.png", "montpellier_2023_30c.png", "montpellier_2024_30c.png", "montpellier_2025_30c.png", "montpellier_2026_30c.png"];
+    const slider = document.getElementById("slider");
+    const img = document.getElementById("frame");
+    const yearLabel = document.getElementById("yearLabel");
+    const playBtn = document.getElementById("play");
+    let timer = null;
+    function show(i) {
+      i = Number(i);
+      img.src = "frames/" + files[i];
+      img.alt = "Montpellier " + years[i];
+      yearLabel.textContent = years[i];
+      slider.value = i;
+    }
+    slider.addEventListener("input", () => show(slider.value));
+    playBtn.addEventListener("click", () => {
+      if (timer) { clearInterval(timer); timer = null; playBtn.textContent = "Lire"; return; }
+      playBtn.textContent = "Pause";
+      timer = setInterval(() => {
+        const next = (Number(slider.value) + 1) % years.length;
+        show(next);
+      }, 1100);
+    });
+    years.forEach((_, i) => { const preload = new Image(); preload.src = "frames/" + files[i]; });
+  </script>
+</body>
+</html>
