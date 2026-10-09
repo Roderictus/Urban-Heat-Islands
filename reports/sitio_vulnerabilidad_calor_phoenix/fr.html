@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indice de vulnérabilité climatique : Phoenix — avril et mai 2026</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="es" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="alternate" hreflang="fr" href="fr.html">
+  <style>
+    :root { --ink:#1a1a1a; --muted:#555; --line:#e6e1d8; --accent:#c2410c; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:#f7f4ef;
+      font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif; line-height:1.55; }
+    header { background:#111; color:#fff; padding:36px 20px 28px; }
+    header .wrap, main, footer .wrap { max-width:960px; margin:0 auto; }
+    header .wrap { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+    header .titles { min-width:0; }
+    h1 { font-size:2.05rem; margin:0 0 8px; letter-spacing:-0.02em; }
+    .kicker { color:#f0c27a; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; }
+    .langs { display:flex; gap:10px; font-size:0.78rem; letter-spacing:0.08em; flex-shrink:0; padding-top:2px; }
+    .langs a { color:#f0c27a; text-decoration:none; }
+    .langs a[aria-current="true"] { color:#fff; border-bottom:1px solid #f0c27a; padding-bottom:1px; }
+    main { padding:28px 20px 64px; }
+    h2 { font-size:1.25rem; margin:2.2rem 0 0.7rem; }
+    figure { margin:0 0 1.2rem; }
+    figure img { width:100%; height:auto; background:#111; display:block; }
+    figure.rank-fig { max-width:680px; margin-left:auto; margin-right:auto; }
+    figure.rank-fig img, figure.light img { background:#fff; }
+    figure.rank-fig.compact { max-width:460px; }
+    figcaption { font-size:0.88rem; color:var(--muted); margin-top:8px; }
+    .quad { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .quad figure { margin:0; }
+    .method { background:#fff; border:1px solid var(--line); padding:1rem 1.1rem; margin:0 0 12px; }
+    .methods { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .methods .method h3 { margin:0 0 0.45rem; font-size:1.0rem; }
+    .methods .method p { margin:0; font-size:0.9rem; color:var(--muted); }
+    .metric { background:#fff; border-left:4px solid var(--accent); padding:0.9rem 1.1rem; margin:0 0 1.2rem; }
+    @media (max-width: 640px) { .quad, .methods { grid-template-columns:1fr; } header .wrap { flex-direction:column; } }
+    table { width:100%; border-collapse:collapse; background:#fff; font-size:0.86rem; }
+    th, td { padding:7px 8px; border-bottom:1px solid var(--line); text-align:right; }
+    th { background:#111; color:#fff; font-weight:600; }
+    th:nth-child(1), td:nth-child(1), th:nth-child(2), td:nth-child(2) { text-align:left; }
+    .stats { padding-left:18px; }
+    .card { border-top:1px solid var(--line); padding-top:8px; }
+    .note { color:var(--muted); font-size:0.95rem; margin:0.4rem 0 0.9rem; }
+    .hotspots table { margin:0 0 1.2rem; }
+    .pdf-links { margin:12px 0 0; font-size:0.9rem; }
+    .pdf-links a { color:#f0c27a; }
+    nav.toc { background:#fff; border:1px solid var(--line); padding:1rem 1.2rem 1.1rem; margin:0 0 1.6rem; }
+    nav.toc h2 { margin:0 0 0.6rem; font-size:1.05rem; }
+    nav.toc ol { margin:0; padding-left:1.25rem; }
+    nav.toc li { margin:0.22rem 0; }
+    nav.toc a { color:var(--ink); text-decoration:none; }
+    nav.toc a:hover { color:var(--accent); }
+    footer { background:#111; color:#bbb; padding:18px 20px; }
+    footer strong { color:#ddd; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="titles">
+        <div class="kicker">Anaplian.com · télédétection urbaine · Priorité 2</div>
+        <h1>Indice de vulnérabilité climatique : Phoenix</h1>
+        <p>Avril et mai 2026 · LST maximale, LST moyenne, végétation et îlot de chaleur · 15 villages urbains · ivc-l4-v1</p>
+        <p class="pdf-links">Rapport PDF: <a href="Vulnerabilidad_climatica_Phoenix_2026.pdf">ES</a> · <a href="Climate_vulnerability_Phoenix_2026.pdf">EN</a> · <a href="Vulnerabilite_climatique_Phoenix_2026.pdf">FR</a></p>
+      </div>
+      <nav class="langs"><a href="index.html">ES</a><a href="en.html">EN</a><a href="fr.html" aria-current="true">FR</a></nav>
+    </div>
+  </header>
+  <main>
+    <nav class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#intro">1. Introduction</a></li><li><a href="#rank">2. Position dans l’indice</a></li><li><a href="#subdiv">3. Subdivisions à l’IVC le plus élevé</a></li><li><a href="#methods">4. Quatre méthodes</a></li><li><a href="#map1">5. Température de surface maximale par pixel (> 43 °C)</a></li><li><a href="#map2">6. Température de surface, moyenne des observations (> 35 °C)</a></li><li><a href="#map3">7. Végétation (NDVI)</a></li><li><a href="#map4">8. Îlot de chaleur (pixel − rural)</a></li><li><a href="#order">9. Quatre éléments du sous-indice</a></li><li><a href="#table">10. Tableau des villages urbains</a></li><li><a href="#units">11. Villages urbains</a></li><li><a href="#why">12. Pourquoi Phoenix est en Priorité 2</a></li>
+      </ol>
+    </nav>
+    <h2 id="intro">1. Introduction</h2>
+    <p>La hausse soutenue de la température moyenne et de sa variabilité — plus de jours extrêmes, des vagues plus longues — pèse sur les peuplements humains. Le corps dissipe la chaleur par rayonnement, convection et surtout évaporation de la sueur. Quand l’air et les surfaces qui rayonnent empêchent cette perte, la température corporelle monte, le cœur travaille plus pour envoyer le sang vers la peau, eau et électrolytes se perdent. L’issue peut être l’épuisement, le coup de chaleur ou une décompensation cardiovasculaire et rénale. La chaleur nocturne, typique des îlots urbains, réduit la récupération du sommeil. Le risque est plus élevé chez les personnes âgées, malades chroniques, travailleurs en extérieur et habitants de logements mal ventilés ou sans ombre.</p>
+    <p>Le but de cet indice est de quantifier cette charge de chaleur de surface et de la rendre comparable, pour voir où se concentre la vulnérabilité et quels traits urbains la favorisent : revêtement, hangars, déficit de verdure et îlots de chaleur par rapport à l’environnement. Il ne remplace ni la démographie ni la surveillance épidémiologique ; il ordonne le territoire selon l’exposition de surface, avec une métrique fixe d’une ville à l’autre.</p>
+    <p>La comparaison opère à deux échelles. Entre villes, un même nombre dimensionne le problème face à d’autres qui appliquent déjà de bonnes pratiques ou illustrent des solutions à la concentration de chaleur. Dans chaque ville, les divisions politico-administratives — à Phoenix, les villages urbains — localisent plus finement les zones problématiques et désignent autorités et population directement concernées.</p>
+    <p>Par disponibilité des données et comparabilité, nous retenons quatre couches Landsat. Trois sont de température de surface : le maximum de la période, la moyenne des observations et l’îlot de chaleur, le différentiel entre une zone de référence proche, rurale ou moins urbanisée, et la température de la zone. La quatrième est un indice de végétation (NDVI) qui entre inversé : on pénalise un verdissement plus faible, parce que la végétation a un effet de refroidissement net.</p>
+    <h2 id="rank">2. Position dans l’indice</h2>
+    <p>Phoenix occupe la 2e place sur 18 villes mesurées en avril et mai 2026, avec un indice de vulnérabilité climatique (IVC) de 55.4 sur 100. Ahmedabad arrive en tête. Mexico (54.1) suit. Presque tout le max-pixel urbain dépasse 43 °C (99 %) ; la moyenne du composite le fait sur 39 % du sol urbain. Le désert rural est déjà à environ 40 °C, donc le SUHI urbain n’est que de +1.3 °C. Ce qui distingue Phoenix, c’est le revêtement et le déficit de verdure sur un désert chaud, pas un îlot type Mexico sur une forêt fraîche.</p>
+    <figure class="rank-fig compact"><img src="assets/ranking_ciudades_componentes.fr.png" alt="Composantes de l’indice par ville."><figcaption>Composantes de l’indice par ville.</figcaption></figure>
+<p>Dans la ville, l’indice se concentre à l’ouest et dans le noyau. Maryvale arrive en tête (IVC 71) : artères, parkings et toits bas. Central City (71) ajoute le centre, les entrepôts et la lisière de Sky Harbor (NDVI 0,11). Estrella (65) est l’étalement neuf sur désert raclé. South Mountain (62) mélange la réserve et les piémonts pavés. Ahwatukee Foothills (62) ce sont toits de tuiles planifiés. Desert View arrive dernière (44), sur la frange de conservation nord.</p>
+<p>Les villages de l’ouest (Maryvale, Central City) allient dalle, parkings et presque pas de canopée ; la LST moyenne dépasse encore 43 °C sur la plus grande part du masque urbain. Au nord (Desert View, North Gateway, Paradise Valley) le max-pixel reste haut — toits de désert en avril — mais la moyenne baisse avec la densité et l’asphalte.</p>
+<p>Contrairement à Mexico, Phoenix ne s’appuie pas sur une référence rurale fraîche (~40 °C). Contrairement à Ahmedabad, la moyenne n’est pas déjà saturée à 89 %. Le dessin urbain déplace encore la moyenne : ombre, albédo et moins de parking séparent Maryvale de Desert View. Desert View montre le plancher du classement de la ville.</p>
+<p>La couverture du sol dans les cinq villages urbains au plus fort IVC, c’est asphalte, parkings, toits bas et dalle d’aéroport ou d’artère, avec peu de verdure. Maryvale, ce sont parkings de strip-mall et routes à six voies. Central City ajoute dalles du centre et pistes de Sky Harbor. Estrella, c’est le revêtement neuf sur désert. Le score urbain de South Mountain est sur les piémonts asphaltés, pas sur la réserve. Ahwatukee Foothills, toits de tuiles et artères sur lots désertiques. La canopée est fragmentée ; elle ne compense pas la dalle.</p>
+    <h2 id="subdiv">3. Subdivisions à l’IVC le plus élevé</h2>
+<p>Parmi les 296 subdivisions politiques des 18 villes de l’indice comparable, 6 villages urbains de Phoenix entrent dans le top 25 : Maryvale (5e, IVC 71), Central City (7e, IVC 71), Estrella (9e, IVC 65), South Mountain (14e, IVC 62), Ahwatukee Foothills (16e, IVC 62), Alhambra (17e, IVC 61). Maryvale est 5e au général, entre Azcapotzalco et Cuauhtémoc. Le graphique des composantes montre un z_LST max. et un déficit de verdure élevés, avec un SUHI modeste : revêtement de désert, pas un îlot de 13 °C. Desert View (44) reste hors du top 25.</p>
+<figure class="rank-fig"><img src="assets/ranking_unidades_top.fr.png" alt="Subdivisions politiques les mieux classées dans l’indice."><figcaption>Subdivisions politiques les mieux classées dans l’indice.</figcaption></figure>
+<figure class="rank-fig compact"><img src="assets/ranking_unidades_componentes.fr.png" alt="Composantes de l’indice des subdivisions les mieux classées."><figcaption>Composantes de l’indice des subdivisions les mieux classées.</figcaption></figure>
+    <h2 id="methods">4. Quatre méthodes</h2>
+    <p class="metric"><b>Métrique comparable ivc-l4-v1.</b> IVC = 100 × moyenne de z<sub>max</sub>, z<sub>moy</sub>, z<sub>NDVI inv</sub> et z<sub>SUHI</sub>. Ville : IVC 55.4 · SUHI 1.3 °C · T rurale 40.3 °C · 24 scènes · 9.4 obs./pixel · ~11 h 05 heure locale (18 h 05 UTC).</p>
+    <div class="methods">
+      <div class="method"><h3>1. LST maximale par pixel</h3><p>Température de surface maximale. Landsat 8 et 9 Collection 2 niveau 2, bande 10 (ST_B10), 1er avril–31 mai 2026. 24 scènes ; survol ~11 h 05 heure locale (18 h 05 UTC). Masque par pixel du remplissage, des nuages, des ombres et des LST hors 0–80 °C. LST = 0,00341802×DN + 149 − 273,15. Maximum des observations valides (9.4 obs./pixel). Superposition et indice : fraction urbaine > 43 °C.</p></div>
+      <div class="method"><h3>2. LST moyenne des observations</h3><p>Température de surface moyenne des observations. Même collection et même masque. Moyenne des scènes valides. La carte colore à partir de 35 °C ; l’indice utilise la fraction urbaine > 43 °C.</p></div>
+      <div class="method"><h3>3. Végétation (NDVI)</h3><p>Végétation. NDVI = (PIR − rouge)/(PIR + rouge), SR_B5 et SR_B4. Moyenne de la période (24 scènes, ~11 h 05 heure locale (18 h 05 UTC)). Verdure urbaine : NDVI ≥ 0.30 dans GHSL SMOD ≥ 21. Dans l’indice, il entre inversé sur une échelle fixe 0.05–0.55.</p></div>
+      <div class="method"><h3>4. Îlot de chaleur (SUHI)</h3><p>Îlot de chaleur de surface. SUHI = LST moyenne du pixel − T rurale. T rurale = 40.3 °C, GHSL 2020 SMOD 11–13 à l’intérieur du polygone (526 km² ruraux). Superposition : SUHI > 8 °C. z_SUHI = min(max(SUHI urbain, 0) / 15, 1).</p></div>
+    </div>
+    <h2 id="map1">5. Température de surface maximale par pixel (> 43 °C)</h2>
+    <figure>
+      <img src="assets/01_phoenix_lst_max_43.png" alt="5. Température de surface maximale par pixel (> 43 °C)">
+      <figcaption>Maximum des observations valides. Superposition ISO 13732-1 : 43 °C. 24 scènes · ~11 h 05 heure locale (18 h 05 UTC) · 9.4 obs./pixel.</figcaption>
+    </figure>
+    <h2 id="map2">6. Température de surface, moyenne des observations (> 35 °C)</h2>
+    <figure>
+      <img src="assets/02_phoenix_lst_mean.png" alt="6. Température de surface, moyenne des observations (> 35 °C)">
+      <figcaption>Moyenne par pixel. La carte colore à partir de 35 °C ; l’indice utilise &gt; 43 °C.</figcaption>
+    </figure>
+    <h2 id="map3">7. Végétation (NDVI)</h2>
+    <figure>
+      <img src="assets/03_phoenix_ndvi.png" alt="7. Végétation (NDVI)">
+      <figcaption>NDVI moyen du même composite. Verdure urbaine : NDVI ≥ 0.30.</figcaption>
+    </figure>
+    <h2 id="map4">8. Îlot de chaleur (pixel − rural)</h2>
+    <figure>
+      <img src="assets/04_phoenix_suhi.png" alt="8. Îlot de chaleur (pixel − rural)">
+      <figcaption>SUHI = LST moyenne − 40.3 °C. GHSL 2020 SMOD 11–13 à l’intérieur du polygone (526 km² ruraux). Superposition &gt; 8 °C. SUHI urbain : 1.3 °C.</figcaption>
+    </figure>
+    
+    <h2 id="order">9. Quatre éléments du sous-indice</h2>
+    <figure class="light"><img src="assets/05_cuatro_elementos.fr.png" alt="9. Quatre éléments du sous-indice"></figure>
+    <p>Superficie 1440 km² · urbaine GHSL 913 km² (63 %) · LST max. &gt; 43 °C : 99 % · LST moyenne &gt; 43 °C : 39 % · SUHI urbain 1.3 °C · verdure 10 % · IVC ville 55.4.</p>
+    <h2 id="table">10. Tableau des villages urbains</h2>
+    <table>
+      <thead><tr>
+        <th>#</th><th>Village urbain</th><th>IVC</th>
+        <th>LST max. &gt; 43 °C</th><th>LST moyenne &gt; 43 °C</th>
+        <th>SUHI °C</th><th>NDVI urbain</th><th>Verdure</th><th>Obs./pixel</th>
+      </tr></thead>
+      <tbody><tr><td>1</td><td>Maryvale</td><td>71.2</td><td>99%</td><td>75%</td><td>4.4</td><td>0.14</td><td>5%</td><td>6.5</td></tr><tr><td>2</td><td>Central City</td><td>71.1</td><td>100%</td><td>73%</td><td>3.5</td><td>0.11</td><td>3%</td><td>7.0</td></tr><tr><td>3</td><td>Estrella</td><td>64.8</td><td>97%</td><td>62%</td><td>2.8</td><td>0.15</td><td>9%</td><td>6.4</td></tr><tr><td>4</td><td>South Mountain</td><td>62.1</td><td>99%</td><td>56%</td><td>2.5</td><td>0.17</td><td>9%</td><td>7.7</td></tr><tr><td>5</td><td>Ahwatukee Foothills</td><td>61.8</td><td>99%</td><td>52%</td><td>2.6</td><td>0.16</td><td>5%</td><td>9.8</td></tr><tr><td>6</td><td>Alhambra</td><td>61.4</td><td>100%</td><td>60%</td><td>2.5</td><td>0.20</td><td>20%</td><td>6.9</td></tr><tr><td>7</td><td>Encanto</td><td>56.9</td><td>96%</td><td>46%</td><td>2.1</td><td>0.20</td><td>15%</td><td>7.0</td></tr><tr><td>8</td><td>North Mountain</td><td>55.7</td><td>99%</td><td>38%</td><td>1.4</td><td>0.17</td><td>8%</td><td>6.8</td></tr><tr><td>9</td><td>Laveen</td><td>51.4</td><td>98%</td><td>30%</td><td>0.8</td><td>0.19</td><td>15%</td><td>6.8</td></tr><tr><td>10</td><td>Deer Valley</td><td>49.8</td><td>100%</td><td>20%</td><td>0.3</td><td>0.16</td><td>6%</td><td>9.4</td></tr><tr><td>11</td><td>Rio Vista</td><td>47.3</td><td>99%</td><td>12%</td><td>-1.7</td><td>0.16</td><td>3%</td><td>13.4</td></tr><tr><td>12</td><td>North Gateway</td><td>46.8</td><td>100%</td><td>12%</td><td>-1.4</td><td>0.18</td><td>5%</td><td>13.5</td></tr><tr><td>13</td><td>Paradise Valley</td><td>45.6</td><td>98%</td><td>10%</td><td>-0.9</td><td>0.18</td><td>8%</td><td>8.0</td></tr><tr><td>14</td><td>Camelback East</td><td>44.7</td><td>97%</td><td>16%</td><td>-0.5</td><td>0.22</td><td>24%</td><td>8.5</td></tr><tr><td>15</td><td>Desert View</td><td>43.6</td><td>98%</td><td>7%</td><td>-1.2</td><td>0.20</td><td>10%</td><td>13.4</td></tr></tbody>
+    </table>
+    
+    <h2 id="units">11. Villages urbains</h2>
+    
+    <section class="card" id="maryvale">
+      <h2>1. Maryvale</h2>
+      <p class="note">Le village urbain le plus vulnérable (IVC 71). Artères, parkings et toits bas à l’ouest ; NDVI 0,14, 75 % de la moyenne urbaine > 43 °C. Dalle sur désert, pas un différentiel type Mexico.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 71.2 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 99% urbain · 52.6 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 75% urbain · 44.8 °C</li>
+        <li><b>SUHI urbain</b> 4.4 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.14 · 5% · 81.4 km² (97%) · 6.5</li>
+      </ul>
+      
+      <p class="note">À l’ouest : artères à six voies, parkings de strip-mall et toits bas. Presque pas de canopée ; asphalte et dalle expliquent 75 % de moyenne > 43 °C.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/maryvale/lst_max_43.png" alt="LST max. &gt; 43 °C, Maryvale"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/maryvale/lst_mean.png" alt="LST moyenne &gt; 35 °C, Maryvale"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/maryvale/ndvi.png" alt="NDVI, Maryvale"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/maryvale/suhi.png" alt="SUHI, Maryvale"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="central_city">
+      <h2>2. Central City</h2>
+      <p class="note">Noyau et entrepôts (IVC 71). NDVI urbain le plus bas de Phoenix (0,11) : parkings, viaducs et lisière de l’aéroport Sky Harbor. 100 % du max-pixel et 73 % de la moyenne > 43 °C.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 71.1 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 51.7 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 73% urbain · 43.9 °C</li>
+        <li><b>SUHI urbain</b> 3.5 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.11 · 3% · 39.6 km² (72%) · 7.0</li>
+      </ul>
+      
+      <p class="note">Dans le noyau : centre, entrepôts et lisière de Sky Harbor. Pistes, aires et parkings remplacent la végétation ; le NDVI 0,11 est le plancher de la ville.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/central_city/lst_max_43.png" alt="LST max. &gt; 43 °C, Central City"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/central_city/lst_mean.png" alt="LST moyenne &gt; 35 °C, Central City"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/central_city/ndvi.png" alt="NDVI, Central City"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/central_city/suhi.png" alt="SUHI, Central City"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="estrella">
+      <h2>3. Estrella</h2>
+      <p class="note">Expansion sud-ouest (IVC 65). Lotissements neufs sur désert : asphalte frais, toits et peu d’arbres (NDVI 0,15). 62 % de la moyenne urbaine franchit déjà 43 °C.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 64.8 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 97% urbain · 51.2 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 62% urbain · 43.2 °C</li>
+        <li><b>SUHI urbain</b> 2.8 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.15 · 9% · 76.1 km² (71%) · 6.4</li>
+      </ul>
+      
+      <p class="note">Dans l’expansion sud-ouest : rues neuves, toits et désert raclé. L’asphalte frais sur sol nu pousse la moyenne à 62 % au-dessus de 43 °C.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/estrella/lst_max_43.png" alt="LST max. &gt; 43 °C, Estrella"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/estrella/lst_mean.png" alt="LST moyenne &gt; 35 °C, Estrella"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/estrella/ndvi.png" alt="NDVI, Estrella"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/estrella/suhi.png" alt="SUHI, Estrella"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="south_mountain">
+      <h2>4. South Mountain</h2>
+      <p class="note">Réserve face aux piémonts pavés (IVC 62). South Mountain Preserve n’entre pas dans l’indice urbain ; le GHSL ≥ 21 est sur les pentes asphaltées, 56 % de moyenne > 43 °C.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 62.1 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 99% urbain · 50.8 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 56% urbain · 42.9 °C</li>
+        <li><b>SUHI urbain</b> 2.5 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.17 · 9% · 77.5 km² (75%) · 7.7</li>
+      </ul>
+      
+      <p class="note">Sur les piémonts : la réserve est verte ; l’indice regarde le GHSL de versant — maisons, artère et parking — pas la montagne.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/south_mountain/lst_max_43.png" alt="LST max. &gt; 43 °C, South Mountain"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/south_mountain/lst_mean.png" alt="LST moyenne &gt; 35 °C, South Mountain"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/south_mountain/ndvi.png" alt="NDVI, South Mountain"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/south_mountain/suhi.png" alt="SUHI, South Mountain"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="ahwatukee_foothills">
+      <h2>5. Ahwatukee Foothills</h2>
+      <p class="note">Lotissement planifié (IVC 62). Toits de tuiles, artères et lots désertiques ; 99 % du max-pixel > 43 °C et la moyenne encore à 52 %.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 61.8 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 99% urbain · 50.5 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 52% urbain · 43.0 °C</li>
+        <li><b>SUHI urbain</b> 2.6 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.16 · 5% · 60.5 km² (65%) · 9.8</li>
+      </ul>
+      
+      <p class="note">Dans le lotissement : tuile, artère et lot désertique. Peu d’ombre de rue ; les max de toiture franchissent 43 °C sur 99 % du sol urbain.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/ahwatukee_foothills/lst_max_43.png" alt="LST max. &gt; 43 °C, Ahwatukee Foothills"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/ahwatukee_foothills/lst_mean.png" alt="LST moyenne &gt; 35 °C, Ahwatukee Foothills"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/ahwatukee_foothills/ndvi.png" alt="NDVI, Ahwatukee Foothills"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/ahwatukee_foothills/suhi.png" alt="SUHI, Ahwatukee Foothills"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="alhambra">
+      <h2>6. Alhambra</h2>
+      <p class="note">Couloir I-17 (IVC 61). Dalles commerciales, asphalte et 60 % de moyenne urbaine > 43 °C. Un peu plus de verdure que Maryvale (NDVI 0,20), pas assez pour baisser le max.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 61.4 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 50.7 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 60% urbain · 42.9 °C</li>
+        <li><b>SUHI urbain</b> 2.5 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.20 · 20% · 49.8 km² (100%) · 6.9</li>
+      </ul>
+      
+      <p class="note">Le long de l’I-17 : dalles commerciales, stations et asphalte d’accès. Une canopée fragmentée ne coupe pas les 60 % de moyenne au-dessus de 43 °C.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/alhambra/lst_max_43.png" alt="LST max. &gt; 43 °C, Alhambra"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/alhambra/lst_mean.png" alt="LST moyenne &gt; 35 °C, Alhambra"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/alhambra/ndvi.png" alt="NDVI, Alhambra"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/alhambra/suhi.png" alt="SUHI, Alhambra"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="encanto">
+      <h2>7. Encanto</h2>
+      <p class="note">Trame ancienne (IVC 57). Plus d’arbres que l’ouest ; 46 % de moyenne > 43 °C. Le max-pixel reste à 96 % : pic de toiture dans un quartier un peu canopé.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 56.9 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 96% urbain · 50.3 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 46% urbain · 42.5 °C</li>
+        <li><b>SUHI urbain</b> 2.1 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.20 · 15% · 27.1 km² (100%) · 7.0</li>
+      </ul>
+      
+      <p class="note">Sur la trame ancienne : plus d’arbres que Maryvale, encore 96 % de max-pixel > 43 °C. La canopée baisse la moyenne, pas le pic de toiture.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/encanto/lst_max_43.png" alt="LST max. &gt; 43 °C, Encanto"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/encanto/lst_mean.png" alt="LST moyenne &gt; 35 °C, Encanto"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/encanto/ndvi.png" alt="NDVI, Encanto"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/encanto/suhi.png" alt="SUHI, Encanto"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="north_mountain">
+      <h2>8. North Mountain</h2>
+      <p class="note">Nord mixte (IVC 56). 99 % du max-pixel > 43 °C, mais la moyenne tombe à 38 % : moins de charge continue que Maryvale, même dalle de midi.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 55.7 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 99% urbain · 50.4 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 38% urbain · 41.7 °C</li>
+        <li><b>SUHI urbain</b> 1.4 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.17 · 8% · 89.0 km² (99%) · 6.8</li>
+      </ul>
+      
+      <p class="note">Dans le nord mixte : artère et toit ; la moyenne (38 %) n’est plus la charge continue de Maryvale, le maximum sature encore.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/north_mountain/lst_max_43.png" alt="LST max. &gt; 43 °C, North Mountain"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/north_mountain/lst_mean.png" alt="LST moyenne &gt; 35 °C, North Mountain"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/north_mountain/ndvi.png" alt="NDVI, North Mountain"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/north_mountain/suhi.png" alt="SUHI, North Mountain"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="laveen">
+      <h2>9. Laveen</h2>
+      <p class="note">Conversion agricole (IVC 51). Champs qui deviennent rue et toit ; 30 % de moyenne urbaine > 43 °C. L’indice pèse le nouveau GHSL, pas la parcelle restante.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 51.4 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 98% urbain · 50.7 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 30% urbain · 41.2 °C</li>
+        <li><b>SUHI urbain</b> 0.8 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.19 · 15% · 39.4 km² (50%) · 6.8</li>
+      </ul>
+      
+      <p class="note">Sur la conversion : parcelle agricole contre rue neuve. L’indice prend l’asphalte récent, pas le champ restant.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/laveen/lst_max_43.png" alt="LST max. &gt; 43 °C, Laveen"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/laveen/lst_mean.png" alt="LST moyenne &gt; 35 °C, Laveen"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/laveen/ndvi.png" alt="NDVI, Laveen"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/laveen/suhi.png" alt="SUHI, Laveen"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="deer_valley">
+      <h2>10. Deer Valley</h2>
+      <p class="note">Expansion nord (IVC 50). Presque tout le max-pixel > 43 °C ; la moyenne seulement 20 %. Pic de toiture dans un village plus ouvert, près de l’aéroport nord.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 49.8 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 50.6 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 20% urbain · 40.7 °C</li>
+        <li><b>SUHI urbain</b> 0.3 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.16 · 6% · 107.9 km² (74%) · 9.4</li>
+      </ul>
+      
+      <p class="note">Au nord : aéroport et expansion. Beaucoup de max de toiture, peu de moyenne continue : le sol n’est pas encore une dalle de midi.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/deer_valley/lst_max_43.png" alt="LST max. &gt; 43 °C, Deer Valley"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/deer_valley/lst_mean.png" alt="LST moyenne &gt; 35 °C, Deer Valley"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/deer_valley/ndvi.png" alt="NDVI, Deer Valley"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/deer_valley/suhi.png" alt="SUHI, Deer Valley"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="rio_vista">
+      <h2>11. Rio Vista</h2>
+      <p class="note">Canal et désert (IVC 47). SUHI négatif : le rural du polygone chauffe déjà. 12 % de moyenne > 43 °C ; le max-pixel sature encore.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 47.3 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 99% urbain · 51.2 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 12% urbain · 38.7 °C</li>
+        <li><b>SUHI urbain</b> -1.7 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.16 · 3% · 5.0 km² (5%) · 13.4</li>
+      </ul>
+      
+      <p class="note">Près du canal : eau agricole et toit. Le rural du polygone chauffe ; le SUHI négatif dit que la référence n’est pas fraîche.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/rio_vista/lst_max_43.png" alt="LST max. &gt; 43 °C, Rio Vista"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/rio_vista/lst_mean.png" alt="LST moyenne &gt; 35 °C, Rio Vista"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/rio_vista/ndvi.png" alt="NDVI, Rio Vista"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/rio_vista/suhi.png" alt="SUHI, Rio Vista"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="north_gateway">
+      <h2>12. North Gateway</h2>
+      <p class="note">Désert planifié du nord (IVC 47). SUHI −1,4 °C ; 12 % de moyenne > 43 °C. Le contraste de Phoenix : moins de dalle continue, même toit d’avril au soleil.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 46.8 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 50.5 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 12% urbain · 39.0 °C</li>
+        <li><b>SUHI urbain</b> -1.4 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.18 · 5% · 19.8 km² (17%) · 13.5</li>
+      </ul>
+      
+      <p class="note">Sur le désert planifié : faible densité, moins de dalle. 12 % de moyenne > 43 °C est le contraste avec Maryvale, pas une forêt.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/north_gateway/lst_max_43.png" alt="LST max. &gt; 43 °C, North Gateway"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/north_gateway/lst_mean.png" alt="LST moyenne &gt; 35 °C, North Gateway"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/north_gateway/ndvi.png" alt="NDVI, North Gateway"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/north_gateway/suhi.png" alt="SUHI, North Gateway"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="paradise_valley">
+      <h2>13. Paradise Valley</h2>
+      <p class="note">Lots plus grands (IVC 46). Un peu plus de canopée ; 10 % de moyenne > 43 °C. Le max-pixel (98 %) montre que la tuile franchit encore le seuil.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 45.6 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 98% urbain · 49.2 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 10% urbain · 39.5 °C</li>
+        <li><b>SUHI urbain</b> -0.9 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.18 · 8% · 105.0 km² (94%) · 8.0</li>
+      </ul>
+      
+      <p class="note">Sur grands lots : relativement plus de jardin ; le toit franchit encore 43 °C. La moyenne (10 %) baisse faute d’asphalte continu.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/paradise_valley/lst_max_43.png" alt="LST max. &gt; 43 °C, Paradise Valley"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/paradise_valley/lst_mean.png" alt="LST moyenne &gt; 35 °C, Paradise Valley"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/paradise_valley/ndvi.png" alt="NDVI, Paradise Valley"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/paradise_valley/suhi.png" alt="SUHI, Paradise Valley"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="camelback_east">
+      <h2>14. Camelback East</h2>
+      <p class="note">Camelback et avenues (IVC 45). NDVI 0,22, le plus haut du noyau est ; 16 % de moyenne > 43 °C. Resorts et artère : ombre fragmentée sur asphalte.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 44.7 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 97% urbain · 49.1 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 16% urbain · 39.9 °C</li>
+        <li><b>SUHI urbain</b> -0.5 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.22 · 24% · 83.3 km² (89%) · 8.5</li>
+      </ul>
+      
+      <p class="note">Sous Camelback : resorts, avenue et canopée irrégulière. La verdure 0,22 est le haut de l’est ; l’asphalte du couloir reste chaud.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/camelback_east/lst_max_43.png" alt="LST max. &gt; 43 °C, Camelback East"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/camelback_east/lst_mean.png" alt="LST moyenne &gt; 35 °C, Camelback East"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/camelback_east/ndvi.png" alt="NDVI, Camelback East"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/camelback_east/suhi.png" alt="SUHI, Camelback East"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="desert_view">
+      <h2>15. Desert View</h2>
+      <p class="note">Le moins vulnérable (IVC 44). Conservation nord et faible densité ; seulement 7 % de moyenne urbaine > 43 °C. Le max-pixel reste à 98 % : le désert ne pardonne pas le toit, il pardonne la moyenne.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 43.6 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 98% urbain · 48.8 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 7% urbain · 39.1 °C</li>
+        <li><b>SUHI urbain</b> -1.2 °C vs T rurale 40.3 °C</li>
+        <li><b>NDVI urbain</b> 0.20 · 10% · 51.7 km² (29%) · 13.4</li>
+      </ul>
+      
+      <p class="note">Sur la conservation nord : faible densité et 7 % de moyenne > 43 °C. Le toit d’avril reste rouge au max-pixel ; plus à la moyenne.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/desert_view/lst_max_43.png" alt="LST max. &gt; 43 °C, Desert View"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/desert_view/lst_mean.png" alt="LST moyenne &gt; 35 °C, Desert View"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/desert_view/ndvi.png" alt="NDVI, Desert View"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/desert_view/suhi.png" alt="SUHI, Desert View"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <h2 id="why">12. Pourquoi Phoenix est en Priorité 2</h2>
+    <p>La Priorité 2 suit le même découpage — plus de deux millions d’habitants en 18–42 °N — et le même cadre danger × exposition × vulnérabilité, un cran sous les six villes de tête. Elle ne remplace pas Delhi ou Karachi : elle les complète. Lahore, Dhaka et Ahmedabad concentrent la croissance des personne-jours de chaleur extrême en Asie du Sud (Tuholske 2021) ; Phoenix est la référence ECOSTRESS des brûlures sur chaussée (49–60 °C) déjà utilisée dans le style cartographique du projet ; Téhéran apporte une mégapole semi-aride en bassin fermé ; Monterrey est le pendant sec-industriel de Mexico.</p>
+    <p>La métrique est la même ivc-l4-v1 et la fenêtre reste avril–mai 2026, pour qu’un IVC 60 dans un town de Lahore soit comparable à Iztapalapa ou à un urban village de Phoenix. À Lahore, Ahmedabad et Dhaka cette fenêtre est pré-mousson ou saison chaude. À Phoenix et Monterrey le maximum annuel est juin–août ; elles entrent au printemps à dessein pour ne pas casser l’échelle fixe. Ahmedabad a en outre un plan d’action chaleur pionnier en Inde : l’indice mesure l’exposition de surface, pas le succès du plan.</p>
+    <p>Phoenix est le référent de chaleur de chaussée en désert : LST urbaine de 49–60 °C dans le noyau, avec peu de canopée. Les 15 villages urbains de la ville permettent de voir si le noyau (Central City, Maryvale) chauffe plus que le désert planifié du nord (Desert View, North Gateway). Avril–mai n’est pas le pic de juillet ; la ville entre pour ancrer l’échelle.</p>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Anaplian.com</strong> · USGS Landsat 8/9 C2 L2 · GHSL SMOD 2020 ·
+      métrique ivc-l4-v1 · Priorité 2 · 24 scènes · ~11 h 05 heure locale (18 h 05 UTC) · avril–mai 2026
+    </div>
+  </footer>
+</body>
+</html>

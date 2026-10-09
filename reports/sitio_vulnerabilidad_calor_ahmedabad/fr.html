@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indice de vulnérabilité climatique : Ahmedabad — avril et mai 2026</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="alternate" hreflang="es" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="alternate" hreflang="fr" href="fr.html">
+  <style>
+    :root { --ink:#1a1a1a; --muted:#555; --line:#e6e1d8; --accent:#c2410c; }
+    * { box-sizing: border-box; }
+    body { margin:0; color:var(--ink); background:#f7f4ef;
+      font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif; line-height:1.55; }
+    header { background:#111; color:#fff; padding:36px 20px 28px; }
+    header .wrap, main, footer .wrap { max-width:960px; margin:0 auto; }
+    header .wrap { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; }
+    header .titles { min-width:0; }
+    h1 { font-size:2.05rem; margin:0 0 8px; letter-spacing:-0.02em; }
+    .kicker { color:#f0c27a; font-size:0.82rem; letter-spacing:0.12em; text-transform:uppercase; }
+    .langs { display:flex; gap:10px; font-size:0.78rem; letter-spacing:0.08em; flex-shrink:0; padding-top:2px; }
+    .langs a { color:#f0c27a; text-decoration:none; }
+    .langs a[aria-current="true"] { color:#fff; border-bottom:1px solid #f0c27a; padding-bottom:1px; }
+    main { padding:28px 20px 64px; }
+    h2 { font-size:1.25rem; margin:2.2rem 0 0.7rem; }
+    figure { margin:0 0 1.2rem; }
+    figure img { width:100%; height:auto; background:#111; display:block; }
+    figure.rank-fig { max-width:680px; margin-left:auto; margin-right:auto; }
+    figure.rank-fig img, figure.light img { background:#fff; }
+    figure.rank-fig.compact { max-width:460px; }
+    figcaption { font-size:0.88rem; color:var(--muted); margin-top:8px; }
+    .quad { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .quad figure { margin:0; }
+    .method { background:#fff; border:1px solid var(--line); padding:1rem 1.1rem; margin:0 0 12px; }
+    .methods { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .methods .method h3 { margin:0 0 0.45rem; font-size:1.0rem; }
+    .methods .method p { margin:0; font-size:0.9rem; color:var(--muted); }
+    .metric { background:#fff; border-left:4px solid var(--accent); padding:0.9rem 1.1rem; margin:0 0 1.2rem; }
+    @media (max-width: 640px) { .quad, .methods { grid-template-columns:1fr; } header .wrap { flex-direction:column; } }
+    table { width:100%; border-collapse:collapse; background:#fff; font-size:0.86rem; }
+    th, td { padding:7px 8px; border-bottom:1px solid var(--line); text-align:right; }
+    th { background:#111; color:#fff; font-weight:600; }
+    th:nth-child(1), td:nth-child(1), th:nth-child(2), td:nth-child(2) { text-align:left; }
+    .stats { padding-left:18px; }
+    .card { border-top:1px solid var(--line); padding-top:8px; }
+    .note { color:var(--muted); font-size:0.95rem; margin:0.4rem 0 0.9rem; }
+    .hotspots table { margin:0 0 1.2rem; }
+    .pdf-links { margin:12px 0 0; font-size:0.9rem; }
+    .pdf-links a { color:#f0c27a; }
+    nav.toc { background:#fff; border:1px solid var(--line); padding:1rem 1.2rem 1.1rem; margin:0 0 1.6rem; }
+    nav.toc h2 { margin:0 0 0.6rem; font-size:1.05rem; }
+    nav.toc ol { margin:0; padding-left:1.25rem; }
+    nav.toc li { margin:0.22rem 0; }
+    nav.toc a { color:var(--ink); text-decoration:none; }
+    nav.toc a:hover { color:var(--accent); }
+    footer { background:#111; color:#bbb; padding:18px 20px; }
+    footer strong { color:#ddd; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="titles">
+        <div class="kicker">Anaplian.com · télédétection urbaine · Priorité 2</div>
+        <h1>Indice de vulnérabilité climatique : Ahmedabad</h1>
+        <p>Avril et mai 2026 · LST maximale, LST moyenne, végétation et îlot de chaleur · 7 talukas · ivc-l4-v1</p>
+        <p class="pdf-links">Rapport PDF: <a href="Vulnerabilidad_climatica_Ahmedabad_2026.pdf">ES</a> · <a href="Climate_vulnerability_Ahmedabad_2026.pdf">EN</a> · <a href="Vulnerabilite_climatique_Ahmedabad_2026.pdf">FR</a></p>
+      </div>
+      <nav class="langs"><a href="index.html">ES</a><a href="en.html">EN</a><a href="fr.html" aria-current="true">FR</a></nav>
+    </div>
+  </header>
+  <main>
+    <nav class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#intro">1. Introduction</a></li><li><a href="#rank">2. Position dans l’indice</a></li><li><a href="#subdiv">3. Subdivisions à l’IVC le plus élevé</a></li><li><a href="#methods">4. Quatre méthodes</a></li><li><a href="#map1">5. Température de surface maximale par pixel (> 43 °C)</a></li><li><a href="#map2">6. Température de surface, moyenne des observations (> 35 °C)</a></li><li><a href="#map3">7. Végétation (NDVI)</a></li><li><a href="#map4">8. Îlot de chaleur (pixel − rural)</a></li><li><a href="#order">9. Quatre éléments du sous-indice</a></li><li><a href="#table">10. Tableau des talukas</a></li><li><a href="#units">11. Talukas</a></li><li><a href="#why">12. Pourquoi Ahmedabad est en Priorité 2</a></li>
+      </ol>
+    </nav>
+    <h2 id="intro">1. Introduction</h2>
+    <p>La hausse soutenue de la température moyenne et de sa variabilité — plus de jours extrêmes, des vagues plus longues — pèse sur les peuplements humains. Le corps dissipe la chaleur par rayonnement, convection et surtout évaporation de la sueur. Quand l’air et les surfaces qui rayonnent empêchent cette perte, la température corporelle monte, le cœur travaille plus pour envoyer le sang vers la peau, eau et électrolytes se perdent. L’issue peut être l’épuisement, le coup de chaleur ou une décompensation cardiovasculaire et rénale. La chaleur nocturne, typique des îlots urbains, réduit la récupération du sommeil. Le risque est plus élevé chez les personnes âgées, malades chroniques, travailleurs en extérieur et habitants de logements mal ventilés ou sans ombre.</p>
+    <p>Le but de cet indice est de quantifier cette charge de chaleur de surface et de la rendre comparable, pour voir où se concentre la vulnérabilité et quels traits urbains la favorisent : revêtement, hangars, déficit de verdure et îlots de chaleur par rapport à l’environnement. Il ne remplace ni la démographie ni la surveillance épidémiologique ; il ordonne le territoire selon l’exposition de surface, avec une métrique fixe d’une ville à l’autre.</p>
+    <p>La comparaison opère à deux échelles. Entre villes, un même nombre dimensionne le problème face à d’autres qui appliquent déjà de bonnes pratiques ou illustrent des solutions à la concentration de chaleur. Dans chaque ville, les divisions politico-administratives — à Ahmedabad, les talukas — localisent plus finement les zones problématiques et désignent autorités et population directement concernées.</p>
+    <p>Par disponibilité des données et comparabilité, nous retenons quatre couches Landsat. Trois sont de température de surface : le maximum de la période, la moyenne des observations et l’îlot de chaleur, le différentiel entre une zone de référence proche, rurale ou moins urbanisée, et la température de la zone. La quatrième est un indice de végétation (NDVI) qui entre inversé : on pénalise un verdissement plus faible, parce que la végétation a un effet de refroidissement net.</p>
+    <h2 id="rank">2. Position dans l’indice</h2>
+    <p>Ahmedabad occupe la 1re place sur 18 villes mesurées en avril et mai 2026, avec un indice de vulnérabilité climatique (IVC) de 61.1 sur 100. Elle arrive en tête parce que presque tout le tissu urbain dépasse 43 °C au max-pixel (99 %) et à la moyenne du composite (89 %). La référence rurale est elle-même d’environ 48 °C, donc le SUHI est de -1.7 °C et n’ajoute rien : c’est une chaleur de fond, pas un îlot classique ville–campagne. Phoenix (55.4) suit.</p>
+    <figure class="rank-fig compact"><img src="assets/ranking_ciudades_componentes.fr.png" alt="Composantes de l’indice par ville."><figcaption>Composantes de l’indice par ville.</figcaption></figure>
+<p>Dans le district, les 7 talukas tiennent dans une bande étroite (58–63). Sabarmati arrive en tête (IVC 63) : vieille ville, riverfront et toits denses le long du Sabarmati. Viramgam, Detroj-Rampura, Sanand, Daskroi et Bavla suivent à trois points : chefs-lieux périurbains, hangars GIDC et asphalte de route. Dholka arrive dernière (58), un peu plus verte, pas un refuge frais.</p>
+<p>Le classement est presque plat parce que le climat fixe le plancher : le rural GHSL atteint déjà ~48 °C, donc z_SUHI est nul dans la plupart des talukas. Il reste z_LST max., z_LST moyenne et un déficit de verdure modéré. L’ombre, les toits froids et les arbres comptent encore pour les gens ; ils bougent à peine un indice de ville quand l’environnement dépasse déjà 43 °C.</p>
+<p>Mexico, troisième du classement des villes, est le schéma inverse : un îlot de chaleur fort sur une référence rurale fraîche. Ahmedabad, c’est la charge de pré-mousson du Gujarat, avec un plan d’action chaleur pionnier que cet indice ne note pas.</p>
+<p>La couverture du sol dans les cinq talukas au plus fort IVC, ce sont toits de tôle, hangars industriels, asphalte de route et peu de canopée. Sabarmati est un toit urbain continu le long du fleuve. Viramgam et Detroj-Rampura sont des chefs-lieux sur plaine chaude : revêtement du bourg, lots nus, verdure agricole hors masque urbain. Sanand ajoute hangars GIDC, usines auto et cours de chargement. Daskroi est la ceinture est d’entrepôts et d’anneau. Le Sabarmati et les champs périurbains ne compensent pas la dalle que voit l’indice.</p>
+    <h2 id="subdiv">3. Subdivisions à l’IVC le plus élevé</h2>
+<p>Parmi les 296 subdivisions politiques des 18 villes de l’indice comparable, les 7 talukas d’Ahmedabad entrent dans le top 25 : Sabarmati (11e, IVC 63), Viramgam (13e, IVC 62), Detroj-Rampura (18e, IVC 61), Sanand (19e, IVC 60), Daskroi (20e, IVC 60), Bavla (21e, IVC 60), Dholka (25e, IVC 58). La ville est première parce que tout le district est un plancher haut, pas parce qu’un quartier sature le SUHI. Le graphique des composantes montre z_LST max. et z_LST moyenne près de 1,0 et z_SUHI à zéro : une plaine chaude, pas un îlot urbain.</p>
+<figure class="rank-fig"><img src="assets/ranking_unidades_top.fr.png" alt="Subdivisions politiques les mieux classées dans l’indice."><figcaption>Subdivisions politiques les mieux classées dans l’indice.</figcaption></figure>
+<figure class="rank-fig compact"><img src="assets/ranking_unidades_componentes.fr.png" alt="Composantes de l’indice des subdivisions les mieux classées."><figcaption>Composantes de l’indice des subdivisions les mieux classées.</figcaption></figure>
+    <h2 id="methods">4. Quatre méthodes</h2>
+    <p class="metric"><b>Métrique comparable ivc-l4-v1.</b> IVC = 100 × moyenne de z<sub>max</sub>, z<sub>moy</sub>, z<sub>NDVI inv</sub> et z<sub>SUHI</sub>. Ville : IVC 61.1 · SUHI -1.7 °C · T rurale 48.1 °C · 32 scènes · 11.3 obs./pixel · ~11 h 05 heure locale (5 h 35 UTC).</p>
+    <div class="methods">
+      <div class="method"><h3>1. LST maximale par pixel</h3><p>Température de surface maximale. Landsat 8 et 9 Collection 2 niveau 2, bande 10 (ST_B10), 1er avril–31 mai 2026. 32 scènes ; survol ~11 h 05 heure locale (5 h 35 UTC). Masque par pixel du remplissage, des nuages, des ombres et des LST hors 0–80 °C. LST = 0,00341802×DN + 149 − 273,15. Maximum des observations valides (11.3 obs./pixel). Superposition et indice : fraction urbaine > 43 °C.</p></div>
+      <div class="method"><h3>2. LST moyenne des observations</h3><p>Température de surface moyenne des observations. Même collection et même masque. Moyenne des scènes valides. La carte colore à partir de 35 °C ; l’indice utilise la fraction urbaine > 43 °C.</p></div>
+      <div class="method"><h3>3. Végétation (NDVI)</h3><p>Végétation. NDVI = (PIR − rouge)/(PIR + rouge), SR_B5 et SR_B4. Moyenne de la période (32 scènes, ~11 h 05 heure locale (5 h 35 UTC)). Verdure urbaine : NDVI ≥ 0.30 dans GHSL SMOD ≥ 21. Dans l’indice, il entre inversé sur une échelle fixe 0.05–0.55.</p></div>
+      <div class="method"><h3>4. Îlot de chaleur (SUHI)</h3><p>Îlot de chaleur de surface. SUHI = LST moyenne du pixel − T rurale. T rurale = 48.1 °C, GHSL 2020 SMOD 11–13 à l’intérieur du polygone (3977 km² ruraux). Superposition : SUHI > 8 °C. z_SUHI = min(max(SUHI urbain, 0) / 15, 1).</p></div>
+    </div>
+    <h2 id="map1">5. Température de surface maximale par pixel (> 43 °C)</h2>
+    <figure>
+      <img src="assets/01_ahmedabad_lst_max_43.png" alt="5. Température de surface maximale par pixel (> 43 °C)">
+      <figcaption>Maximum des observations valides. Superposition ISO 13732-1 : 43 °C. 32 scènes · ~11 h 05 heure locale (5 h 35 UTC) · 11.3 obs./pixel.</figcaption>
+    </figure>
+    <h2 id="map2">6. Température de surface, moyenne des observations (> 35 °C)</h2>
+    <figure>
+      <img src="assets/02_ahmedabad_lst_mean.png" alt="6. Température de surface, moyenne des observations (> 35 °C)">
+      <figcaption>Moyenne par pixel. La carte colore à partir de 35 °C ; l’indice utilise &gt; 43 °C.</figcaption>
+    </figure>
+    <h2 id="map3">7. Végétation (NDVI)</h2>
+    <figure>
+      <img src="assets/03_ahmedabad_ndvi.png" alt="7. Végétation (NDVI)">
+      <figcaption>NDVI moyen du même composite. Verdure urbaine : NDVI ≥ 0.30.</figcaption>
+    </figure>
+    <h2 id="map4">8. Îlot de chaleur (pixel − rural)</h2>
+    <figure>
+      <img src="assets/04_ahmedabad_suhi.png" alt="8. Îlot de chaleur (pixel − rural)">
+      <figcaption>SUHI = LST moyenne − 48.1 °C. GHSL 2020 SMOD 11–13 à l’intérieur du polygone (3977 km² ruraux). Superposition &gt; 8 °C. SUHI urbain : -1.7 °C.</figcaption>
+    </figure>
+    
+    <h2 id="order">9. Quatre éléments du sous-indice</h2>
+    <figure class="light"><img src="assets/05_cuatro_elementos.fr.png" alt="9. Quatre éléments du sous-indice"></figure>
+    <p>Superficie 4780 km² · urbaine GHSL 795 km² (17 %) · LST max. &gt; 43 °C : 99 % · LST moyenne &gt; 43 °C : 89 % · SUHI urbain -1.7 °C · verdure 35 % · IVC ville 61.1.</p>
+    <h2 id="table">10. Tableau des talukas</h2>
+    <table>
+      <thead><tr>
+        <th>#</th><th>Taluka</th><th>IVC</th>
+        <th>LST max. &gt; 43 °C</th><th>LST moyenne &gt; 43 °C</th>
+        <th>SUHI °C</th><th>NDVI urbain</th><th>Verdure</th><th>Obs./pixel</th>
+      </tr></thead>
+      <tbody><tr><td>1</td><td>Sabarmati</td><td>63.2</td><td>99%</td><td>89%</td><td>-2.3</td><td>0.22</td><td>21%</td><td>15.2</td></tr><tr><td>2</td><td>Viramgam</td><td>62.2</td><td>100%</td><td>94%</td><td>0.2</td><td>0.28</td><td>32%</td><td>8.0</td></tr><tr><td>3</td><td>Detroj-Rampura</td><td>61.0</td><td>100%</td><td>96%</td><td>0.6</td><td>0.33</td><td>57%</td><td>8.0</td></tr><tr><td>4</td><td>Sanand</td><td>60.1</td><td>100%</td><td>87%</td><td>-1.5</td><td>0.28</td><td>41%</td><td>11.3</td></tr><tr><td>5</td><td>Daskroi</td><td>60.1</td><td>100%</td><td>88%</td><td>-2.1</td><td>0.29</td><td>41%</td><td>13.8</td></tr><tr><td>6</td><td>Bavla</td><td>60.1</td><td>100%</td><td>89%</td><td>-0.6</td><td>0.29</td><td>42%</td><td>9.4</td></tr><tr><td>7</td><td>Dholka</td><td>57.8</td><td>100%</td><td>85%</td><td>-2.3</td><td>0.32</td><td>51%</td><td>17.0</td></tr></tbody>
+    </table>
+    
+    <h2 id="units">11. Talukas</h2>
+    
+    <section class="card" id="sabarmati">
+      <h2>1. Sabarmati</h2>
+      <p class="note">Taluka urbaine du fleuve et de la vieille ville (IVC 63). Presque tout le max-pixel et 89 % de la moyenne urbaine dépassent 43 °C. Le Sabarmati ne refroidit pas la dalle : toits denses, quais et peu de verdure (NDVI 0,22). Le SUHI est négatif car le rural du district est déjà à ~48 °C.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 63.2 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 99% urbain · 50.6 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 89% urbain · 45.8 °C</li>
+        <li><b>SUHI urbain</b> -2.3 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.22 · 21% · 293.6 km² (88%) · 15.2</li>
+      </ul>
+      
+      <p class="note">Dans la taluka : vieille ville, riverfront du Sabarmati et toits continus ; l’eau du fleuve ne compense ni le béton ni la tôle. Le manque de canopée et l’asphalte des quais font que 89 % de la moyenne urbaine dépasse 43 °C.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/sabarmati/lst_max_43.png" alt="LST max. &gt; 43 °C, Sabarmati"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/sabarmati/lst_mean.png" alt="LST moyenne &gt; 35 °C, Sabarmati"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/sabarmati/ndvi.png" alt="NDVI, Sabarmati"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/sabarmati/suhi.png" alt="SUHI, Sabarmati"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="viramgam">
+      <h2>2. Viramgam</h2>
+      <p class="note">Bourg sur plaine chaude (IVC 62). 100 % du max-pixel urbain et 94 % de la moyenne franchissent 43 °C. Peu de sol urbain GHSL (6 %), mais ce sol est asphalte de chef-lieu et tôle dans un périurbain déjà chargé en chaleur de fond.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 62.2 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 55.8 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 94% urbain · 48.2 °C</li>
+        <li><b>SUHI urbain</b> 0.2 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.28 · 32% · 53.4 km² (6%) · 8.0</li>
+      </ul>
+      
+      <p class="note">Au chef-lieu : asphalte de bourg et toits de tôle sur une plaine qui dépasse déjà 43 °C en avril–mai hors ville. L’« urbain » est un îlot de revêtement dans une mer chaude, pas un contraste frais.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/viramgam/lst_max_43.png" alt="LST max. &gt; 43 °C, Viramgam"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/viramgam/lst_mean.png" alt="LST moyenne &gt; 35 °C, Viramgam"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/viramgam/ndvi.png" alt="NDVI, Viramgam"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/viramgam/suhi.png" alt="SUHI, Viramgam"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="detroj_rampura">
+      <h2>3. Detroj-Rampura</h2>
+      <p class="note">Ceinture périurbaine agricole (IVC 61). La part de moyenne > 43 °C est la plus haute du district (96 %). Lots, sol nu et toits ; le NDVI 0,33 est le plus vert des talukas, et le composite ne descend toujours pas sous 43 °C.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 61.0 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 55.9 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 96% urbain · 48.6 °C</li>
+        <li><b>SUHI urbain</b> 0.6 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.33 · 57% · 32.3 km² (9%) · 8.0</li>
+      </ul>
+      
+      <p class="note">Dans le bourg : lots, sol nu et toits ; la végétation agricole n’entre pas dans l’indice urbain. D’où 96 % de moyenne > 43 °C malgré un NDVI un peu plus haut.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/detroj_rampura/lst_max_43.png" alt="LST max. &gt; 43 °C, Detroj-Rampura"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/detroj_rampura/lst_mean.png" alt="LST moyenne &gt; 35 °C, Detroj-Rampura"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/detroj_rampura/ndvi.png" alt="NDVI, Detroj-Rampura"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/detroj_rampura/suhi.png" alt="SUHI, Detroj-Rampura"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="sanand">
+      <h2>4. Sanand</h2>
+      <p class="note">Couloir industriel (IVC 60). Hangars du GIDC, usines auto et cours. 100 % du max-pixel urbain > 43 °C ; le SUHI reste négatif : les hangars sont aussi chauds que la plaine périurbaine, pas plus.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 60.1 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 53.2 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 87% urbain · 46.6 °C</li>
+        <li><b>SUHI urbain</b> -1.5 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.28 · 41% · 117.7 km² (15%) · 11.3</li>
+      </ul>
+      
+      <p class="note">Sur le couloir GIDC : hangars, cours et usines auto. Béton de toiture et asphalte de quai ; le périurbain n’est pas plus frais que le hangar.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/sanand/lst_max_43.png" alt="LST max. &gt; 43 °C, Sanand"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/sanand/lst_mean.png" alt="LST moyenne &gt; 35 °C, Sanand"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/sanand/ndvi.png" alt="NDVI, Sanand"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/sanand/suhi.png" alt="SUHI, Sanand"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="daskroi">
+      <h2>5. Daskroi</h2>
+      <p class="note">Anneau est de la ville (IVC 60). Entrepôts, route et lotissements. 100 % du max-pixel et 88 % de la moyenne urbaine > 43 °C, verdure 0,29 qui ne coupe pas la dalle de l’anneau.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 60.1 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 51.4 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 88% urbain · 46.0 °C</li>
+        <li><b>SUHI urbain</b> -2.1 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.29 · 41% · 119.1 km² (19%) · 13.8</li>
+      </ul>
+      
+      <p class="note">Sur l’anneau est : entrepôts, route et lotissements ouverts. La dalle périurbaine d’Ahmedabad est le motif : toit, cour et peu d’arbres.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/daskroi/lst_max_43.png" alt="LST max. &gt; 43 °C, Daskroi"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/daskroi/lst_mean.png" alt="LST moyenne &gt; 35 °C, Daskroi"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/daskroi/ndvi.png" alt="NDVI, Daskroi"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/daskroi/suhi.png" alt="SUHI, Daskroi"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="bavla">
+      <h2>6. Bavla</h2>
+      <p class="note">Axe sud de hangars et de route (IVC 60). 100 % du max-pixel urbain > 43 °C et 89 % de la moyenne. Asphalte de poids lourds et toits industriels ; le périurbain n’offre pas de référence fraîche.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 60.1 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 54.9 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 89% urbain · 47.5 °C</li>
+        <li><b>SUHI urbain</b> -0.6 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.29 · 42% · 99.9 km² (13%) · 9.4</li>
+      </ul>
+      
+      <p class="note">Sur l’axe sud : hangars, remorques et route. L’asphalte de fret et les toits industriels maintiennent la moyenne urbaine près de 89 % au-dessus de 43 °C.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/bavla/lst_max_43.png" alt="LST max. &gt; 43 °C, Bavla"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/bavla/lst_mean.png" alt="LST moyenne &gt; 35 °C, Bavla"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/bavla/ndvi.png" alt="NDVI, Bavla"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/bavla/suhi.png" alt="SUHI, Bavla"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <section class="card" id="dholka">
+      <h2>7. Dholka</h2>
+      <p class="note">La taluka la moins extrême (IVC 58), encore dans le top 25 mondial. Un peu plus de verdure (NDVI 0,32) et 85 % de moyenne > 43 °C. Le plancher du district est déjà haut : ce n’est pas « frais », c’est moins de dalle.</p>
+      <ul class="stats">
+        <li><b>IVC ivc-l4-v1</b> 57.8 / 100</li>
+        <li><b>LST max. &gt; 43 °C</b> 100% urbain · 53.5 °C</li>
+        <li><b>LST moyenne &gt; 43 °C</b> 85% urbain · 45.8 °C</li>
+        <li><b>SUHI urbain</b> -2.3 °C vs T rurale 48.1 °C</li>
+        <li><b>NDVI urbain</b> 0.32 · 51% · 79.4 km² (8%) · 17.0</li>
+      </ul>
+      
+      <p class="note">Au chef-lieu de Dholka : un peu plus de verdure et encore 85 % de moyenne > 43 °C. Le « frais » relatif du district : moins de hangars, pas un oasis.</p>
+      <div class="quad">
+        <figure><img src="assets/unidades/dholka/lst_max_43.png" alt="LST max. &gt; 43 °C, Dholka"><figcaption>LST max. &gt; 43 °C</figcaption></figure>
+        <figure><img src="assets/unidades/dholka/lst_mean.png" alt="LST moyenne &gt; 35 °C, Dholka"><figcaption>LST moyenne &gt; 35 °C</figcaption></figure>
+        <figure><img src="assets/unidades/dholka/ndvi.png" alt="NDVI, Dholka"><figcaption>NDVI</figcaption></figure>
+        <figure><img src="assets/unidades/dholka/suhi.png" alt="SUHI, Dholka"><figcaption>Îlot de chaleur</figcaption></figure>
+      </div>
+    </section>
+    <h2 id="why">12. Pourquoi Ahmedabad est en Priorité 2</h2>
+    <p>La Priorité 2 suit le même découpage — plus de deux millions d’habitants en 18–42 °N — et le même cadre danger × exposition × vulnérabilité, un cran sous les six villes de tête. Elle ne remplace pas Delhi ou Karachi : elle les complète. Lahore, Dhaka et Ahmedabad concentrent la croissance des personne-jours de chaleur extrême en Asie du Sud (Tuholske 2021) ; Phoenix est la référence ECOSTRESS des brûlures sur chaussée (49–60 °C) déjà utilisée dans le style cartographique du projet ; Téhéran apporte une mégapole semi-aride en bassin fermé ; Monterrey est le pendant sec-industriel de Mexico.</p>
+    <p>La métrique est la même ivc-l4-v1 et la fenêtre reste avril–mai 2026, pour qu’un IVC 60 dans un town de Lahore soit comparable à Iztapalapa ou à un urban village de Phoenix. À Lahore, Ahmedabad et Dhaka cette fenêtre est pré-mousson ou saison chaude. À Phoenix et Monterrey le maximum annuel est juin–août ; elles entrent au printemps à dessein pour ne pas casser l’échelle fixe. Ahmedabad a en outre un plan d’action chaleur pionnier en Inde : l’indice mesure l’exposition de surface, pas le succès du plan.</p>
+    <p>Ahmedabad est le référent indien de l’adaptation : elle a eu le premier plan d’action chaleur du pays, mais l’exposition de surface reste très élevée. Le découpage utilise les talukas du district à moins de 55 km du centre (Sabarmati, Daskroi, Sanand et périurbain), pas le SIR de Dholera. L’IVC mesure la chaleur de surface, pas le succès du plan.</p>
+  </main>
+  <footer>
+    <div class="wrap">
+      <strong>Anaplian.com</strong> · USGS Landsat 8/9 C2 L2 · GHSL SMOD 2020 ·
+      métrique ivc-l4-v1 · Priorité 2 · 32 scènes · ~11 h 05 heure locale (5 h 35 UTC) · avril–mai 2026
+    </div>
+  </footer>
+</body>
+</html>

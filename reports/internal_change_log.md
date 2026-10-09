@@ -1,0 +1,80 @@
+# Log interno de cambios
+
+Registro de modificaciones a la página Anaplian (`sitio_vulnerabilidad_calor_cdmx`) y a los reportes PDF.
+
+- **2026-09-30 18:40** — Portada: alcaldías en Web Mercator alineadas al mapa de isla de calor; barra de escala subida; texto metodológico a la izquierda, sin invadir la escala. Título «Índice de Vulnerabilidad Climática…»; texto naranja de portada eliminado. Capítulos numerados e índice en HTML y PDF. Capítulo de posición con tono más formal. PDF ES/EN/FR enlazados en la cabecera de la página.
+  - `reports/plot_cdmx_cover.py`
+  - `reports/ivc_report_i18n.py`
+  - `reports/sitio_vulnerabilidad_calor_cdmx/`
+- **2026-09-30 18:44** — Actualización del sitio cdmx: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_CDMX_2026.pdf`
+  - `Climate_vulnerability_Mexico_City_2026.pdf`
+  - `Vulnerabilite_climatique_Mexico_2026.pdf`
+  - `assets/00_cdmx_cover.png`
+- **2026-09-30 18:46** — Actualización del sitio cdmx: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_CDMX_2026.pdf`
+  - `Climate_vulnerability_Mexico_City_2026.pdf`
+  - `Vulnerabilite_climatique_Mexico_2026.pdf`
+  - `assets/00_cdmx_cover.png`
+- **2026-09-30 23:21** — Actualización del sitio cdmx: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_CDMX_2026.pdf`
+  - `Climate_vulnerability_Mexico_City_2026.pdf`
+  - `Vulnerabilite_climatique_Mexico_2026.pdf`
+  - `assets/00_cdmx_cover.png`
+- **2026-09-30 23:23** — Actualización del sitio cdmx: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_CDMX_2026.pdf`
+  - `Climate_vulnerability_Mexico_City_2026.pdf`
+  - `Vulnerabilite_climatique_Mexico_2026.pdf`
+  - `assets/00_cdmx_cover.png`
+- **2026-10-08 23:15** — Actualización del sitio ahmedabad: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_Ahmedabad_2026.pdf`
+  - `Climate_vulnerability_Ahmedabad_2026.pdf`
+  - `Vulnerabilite_climatique_Ahmedabad_2026.pdf`
+  - `assets/00_ahmedabad_cover.png`
+- **2026-10-08 23:15** — Actualización del sitio phoenix: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_Phoenix_2026.pdf`
+  - `Climate_vulnerability_Phoenix_2026.pdf`
+  - `Vulnerabilite_climatique_Phoenix_2026.pdf`
+  - `assets/00_phoenix_cover.png`
+- **2026-10-08 23:16** — Actualización del sitio ahmedabad: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_Ahmedabad_2026.pdf`
+  - `Climate_vulnerability_Ahmedabad_2026.pdf`
+  - `Vulnerabilite_climatique_Ahmedabad_2026.pdf`
+  - `assets/00_ahmedabad_cover.png`
+- **2026-10-08 23:17** — Actualización del sitio phoenix: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_Phoenix_2026.pdf`
+  - `Climate_vulnerability_Phoenix_2026.pdf`
+  - `Vulnerabilite_climatique_Phoenix_2026.pdf`
+  - `assets/00_phoenix_cover.png`
+- **2026-10-08 23:19** — Actualización del sitio phoenix: HTML es, en, fr y PDF regenerados.
+  - `index.html`
+  - `en.html`
+  - `fr.html`
+  - `Vulnerabilidad_climatica_Phoenix_2026.pdf`
+  - `Climate_vulnerability_Phoenix_2026.pdf`
+  - `Vulnerabilite_climatique_Phoenix_2026.pdf`
+  - `assets/00_phoenix_cover.png`
